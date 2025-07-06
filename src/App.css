@@ -1,38 +1,534 @@
+/* --- Global Styles & Cyber Security Theme --- */
+:root {
+  --primary-bg: #0a0f14; /* Very dark blue/black */
+  --secondary-bg: #121a23; /* Slightly lighter dark blue */
+  --text-color: #c0c0c0; /* Light grey */
+  --accent-color: #00ff37; /* Neon green */
+  --highlight-color: #00ff37; /* Bright green for highlights */
+  --border-color: #2a3b4f; /* Muted blue for borders */
+  --header-bg: rgba(10, 15, 20, 0.85); /* Semi-transparent header */
+
+  --font-primary: 'Roboto Mono', 'Courier New', monospace;
+  --font-secondary: 'Arial', sans-serif;
+}
+
+/* ... (keep @import and other global styles: *, html, body, .App.no-scroll, .App) ... */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Prevent body scroll when mobile menu is open */
+.App.no-scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* --- Header & Navigation --- */
+.app-header {
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px);
+  color: var(--accent-color); /* This color can be inherited by the icon if not set directly */
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 10px rgba(0, 255, 55, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Desktop Navigation */
+.app-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.app-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  position: relative;
+}
+
+.app-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.app-nav a:hover,
+.app-nav a:focus {
+  color: var(--accent-color);
+  text-shadow: 0 0 5px var(--accent-color);
+}
+
+.app-nav a:hover::after,
+.app-nav a:focus::after {
+  width: 100%;
+}
+
+/* --- Mobile Navigation Toggle (Hamburger) --- */
+.mobile-nav-toggle {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1100;
+  /* Styling for the FontAwesome icon within the button */
+  color: #ffffff; /* <<< MAKE ICON WHITE HERE <<< */
+  font-size: 1.6rem; /* Adjust size of the FontAwesome icon */
+  line-height: 1; /* Ensure proper vertical alignment if needed */
+}
+
+/* REMOVE THE FOLLOWING .hamburger-bar STYLES as they are no longer needed */
+/*
+.mobile-nav-toggle .hamburger-bar { ... }
+.mobile-nav-toggle.open .hamburger-bar:nth-child(1) { ... }
+.mobile-nav-toggle.open .hamburger-bar:nth-child(2) { ... }
+.mobile-nav-toggle.open .hamburger-bar:nth-child(3) { ... }
+*/
+
+
+/* --- Main Content & Sections --- */
+/* ... (Keep all your existing styles for .app-main, .app-section, .education-entry, .project-card, contact form, etc.) ... */
+.app-main {
+  padding-top: 70px; 
+  flex-grow: 1;
+}
+
+.app-section {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.app-section:last-of-type {
+  border-bottom: none;
+}
+
+.app-section:nth-child(even) {
+  background-color: var(--secondary-bg);
+}
+
+.section-content {
+  max-width: 900px;
+  width: 100%;
+  text-align: left;
+}
+
+.section-icon {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  display: block;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-section h2 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.binary-divider {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--highlight-color);
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  opacity: 0.7;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-section p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.app-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.app-section li {
+  margin-bottom: 0.75rem;
+}
+
+/* Education */
+.education-entry {
+  background-color: rgba(30, 40, 50, 0.3);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--accent-color);
+  border-radius: 4px;
+}
+.education-entry h3 {
+  color: var(--highlight-color);
+  margin-bottom: 0.25rem;
+  font-size: 1.3rem;
+}
+.education-entry .institution {
+  font-style: italic;
+  color: var(--text-color);
+  opacity: 0.9;
+  font-size: 1rem;
+}
+.education-entry .dates {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+
+/* Certifications */
+.certifications-list li {
+  background-color: rgba(30, 40, 50, 0.2);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s, border-color 0.3s;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.certifications-list li:hover {
+  background-color: rgba(40, 50, 60, 0.4);
+  border-color: var(--accent-color);
+}
+
+.certifications-list li strong,
+.certifications-list li em { 
+  color: var(--highlight-color);
+  margin-right: 1rem;
+}
+.certifications-list li em {
+    font-style: normal; 
+}
+
+.certifications-list li .certification-date {
+  color: var(--accent-color);
+  opacity: 0.85;
+  font-size: 0.9em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Projects */
+.project-card {
+  background-color: var(--secondary-bg);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 255, 55, 0.05); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 25px rgba(0, 255, 55, 0.15); 
+}
+
+.project-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.75rem; 
+  font-size: 1.3rem; 
+}
+
+.project-tech { 
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.project-link { 
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 1rem; 
+}
+
+.project-link:hover {
+  background-color: var(--highlight-color);
+  color: #000;
+}
+
+/* Contact Form Styles */
+#contact .contact-form-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto 0 auto;
+}
+
+#contact .contact-actual-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+#contact .contact-actual-form input[type="text"],
+#contact .contact-actual-form input[type="email"],
+#contact .contact-actual-form .message-input {
+  background-color: rgba(18, 26, 35, 0.75);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 1rem 1.2rem;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#contact .contact-actual-form input[type="text"]::placeholder,
+#contact .contact-actual-form input[type="email"]::placeholder,
+#contact .contact-actual-form .message-input::placeholder {
+  color: rgba(192, 192, 192, 0.5);
+  opacity: 1;
+}
+
+#contact .contact-actual-form input[type="text"]:focus,
+#contact .contact-actual-form input[type="email"]:focus,
+#contact .contact-actual-form .message-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  background-color: rgba(25, 35, 50, 0.85);
+  box-shadow: 0 0 12px rgba(0, 255, 55, 0.25), 
+              inset 0 1px 2px rgba(0, 255, 55, 0.1); 
+}
+
+#contact .contact-actual-form .message-input {
+  min-height: 180px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+#contact .contact-actual-form .submit-button {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--highlight-color) 100%);
+  color: var(--primary-bg);
+  border: none;
+  padding: 0.9rem 1.8rem;
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 55, 0.2); 
+  align-self: center;
+  min-width: 200px;
+}
+
+#contact .contact-actual-form .submit-button:hover,
+#contact .contact-actual-form .submit-button:focus {
+  background: linear-gradient(135deg, var(--highlight-color) 0%, var(--accent-color) 100%);
+  color: #000;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 255, 55, 0.35); 
+  outline: none;
+}
+
+#contact .contact-actual-form .submit-button:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 2px 10px rgba(0, 255, 55, 0.2); 
+}
+
+
+/* --- Footer --- */
+.app-footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.app-footer p {
+  margin: 0;
+  opacity: 0.7;
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .logo {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+
+  .mobile-nav-toggle {
+    display: block; /* Show the button on mobile */
+    /* FontAwesome icon inherits color from this button if not set directly on icon */
+  }
+
+  .app-nav {
+    /* (Keep your existing mobile app-nav styles for positioning, background, etc.) */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; 
+    position: fixed;
+    top: 0; 
+    left: -100%; 
+    width: 100%; 
+    height: 100vh;
+    padding-top: 70px; 
+    background-color: var(--primary-bg); 
+    transition: left 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55); 
+    z-index: 1050; 
+    overflow-y: auto; 
+  }
+
+  .app-nav.mobile-menu-open {
+    left: 0;
+    box-shadow: 5px 0px 15px rgba(0,0,0,0.2);
+  }
+
+  .app-nav ul {
+    /* (Keep your existing mobile app-nav ul styles) */
+    flex-direction: column; 
+    width: 90%; 
+    max-width: 400px; 
+    padding: 2rem 0;
+    gap: 0.5rem; 
+    align-items: stretch; 
+  }
+
+  .app-nav li {
+    /* (Keep your existing mobile app-nav li styles) */
+    width: 100%; 
+    margin-bottom: 0; 
+  }
+
+  .app-nav a {
+    /* (Keep your existing mobile app-nav a styles) */
+    font-size: 1.3rem; 
+    padding: 1rem 1.5rem; 
+    display: block; 
+    text-align: center;
+    border-bottom: 1px solid var(--border-color); 
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+   .app-nav li:last-child a {
+    border-bottom: none;
+  }
+
+  .app-nav a:hover,
+  .app-nav a:focus {
+    background-color: var(--secondary-bg); 
+    color: var(--accent-color);
+    text-shadow: none; 
+  }
+
+  .app-nav a::after {
+    display: none; 
+  }
+
+  /* ... (Keep your other existing @media query styles for .app-main, .app-section, etc.) ... */
+  .app-main {
+    padding-top: 70px;
+  }
+
+  .app-section {
+    padding: 3rem 1rem; 
+    min-height: auto;
+  }
+
+  .app-section h2 {
+    font-size: 2rem; 
+  }
+
+  .app-section p, .education-entry ul {
+    font-size: 1rem; 
+  }
+
+  .education-entry, .project-card {
+    padding: 1rem; 
+  }
+  .education-entry h3, .project-card h3 {
+    font-size: 1.2rem; 
+  }
+
+  #contact .contact-form-container {
+    margin-top: 1.5rem;
+    padding: 0 0.5rem; 
+  }
+  #contact .contact-actual-form input[type="text"],
+  #contact .contact-actual-form input[type="email"],
+  #contact .contact-actual-form .message-input {
+    padding: 0.9rem 1rem; 
+    font-size: 0.95rem;
+  }
+  #contact .contact-actual-form .submit-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    width: 100%; 
+    max-width: 300px; 
   }
 }
