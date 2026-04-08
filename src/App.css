@@ -252,17 +252,17 @@ body::before {
 }
 
 .glitch-text::before {
-  color: var(--term-cyan);
+  color: #00cc33;
   animation: glitchTop 2s infinite linear alternate-reverse;
   clip-path: inset(0 0 60% 0);
-  text-shadow: -2px 0 var(--term-red);
+  text-shadow: -2px 0 #000000;
 }
 
 .glitch-text::after {
-  color: var(--term-red);
+  color: #000000;
   animation: glitchBottom 1.5s infinite linear alternate-reverse;
   clip-path: inset(60% 0 0 0);
-  text-shadow: 2px 0 var(--term-cyan);
+  text-shadow: 2px 0 #00cc33;
 }
 
 @keyframes glitchShake {
@@ -354,7 +354,7 @@ body::before {
 }
 
 .terminal-body {
-  padding: 1.2rem 1.5rem;
+  padding: 1.2rem 12%;
 }
 
 .terminal-body p {
@@ -363,6 +363,9 @@ body::before {
   opacity: 0;
   animation: fadeTerm 0.3s ease forwards;
   color: var(--term-text-dim);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .term-success {

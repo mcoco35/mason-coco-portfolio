@@ -185,14 +185,14 @@ function App() {
                 <span className="terminal-title">root@mason-coco — bash</span>
               </div>
               <div className="terminal-body">
-                <p>{'>'} Initializing kernel modules...</p>
-                <p className="delay-1">{'>'} Loading cryptographic engines... <span className="term-success">[OK]</span></p>
-                <p className="delay-2">{'>'} Scanning attack surface... <span className="term-warning">[3 vectors found]</span></p>
-                <p className="delay-3">{'>'} Bypassing IDS/IPS firewalls... <span className="term-success">[SUCCESS]</span></p>
-                <p className="delay-4t">{'>'} Establishing encrypted tunnel... <span className="term-success">[AES-256]</span></p>
-                <p className="delay-5">{'>'} Injecting payload into target... <span className="term-success">[CLEAN]</span></p>
-                <p className="delay-6">{'>'} Loading user profile: <span className="term-cyan-text">root@mason-coco</span>... <span className="term-success">[OK]</span></p>
-                <p className="delay-7">{'>'} <span className="term-success">ACCESS GRANTED</span> — Welcome back, Mason. <span className="cursor-blink">_</span></p>
+                <p><span>{'>'} Initializing kernel modules</span> <span className="term-success">[OK]</span></p>
+                <p className="delay-1"><span>{'>'} Loading cryptographic engines</span> <span className="term-success">[OK]</span></p>
+                <p className="delay-2"><span>{'>'} Scanning attack surface</span> <span className="term-warning">[3 vectors found]</span></p>
+                <p className="delay-3"><span>{'>'} Bypassing IDS/IPS firewalls</span> <span className="term-success">[SUCCESS]</span></p>
+                <p className="delay-4t"><span>{'>'} Establishing encrypted tunnel</span> <span className="term-success">[AES-256]</span></p>
+                <p className="delay-5"><span>{'>'} Injecting payload into target</span> <span className="term-success">[CLEAN]</span></p>
+                <p className="delay-6"><span>{'>'} Loading user profile: <span className="term-cyan-text">root@mason-coco</span></span> <span className="term-success">[OK]</span></p>
+                <p className="delay-7"><span>{'>'} <span className="term-success">ACCESS GRANTED</span> — Welcome back. <span className="cursor-blink">_</span></span></p>
               </div>
             </div>
             <div className="delay-8">
