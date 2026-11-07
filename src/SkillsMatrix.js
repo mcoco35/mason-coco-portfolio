@@ -495,7 +495,7 @@ export const SKILLS_DATA = [
     name: 'SIEM / Log Analysis',
     category: 'Defense',
     sources: [
-      { type: 'work', label: 'Booz Allen — SIEM configuration for security monitoring' },
+      { type: 'work', label: 'Booz Allen — SIEM platforms for security monitoring' },
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
       { type: 'cert', label: 'CompTIA CySA+ — Security Operations' },
       { type: 'cert', label: 'CompTIA SecurityX — Security Operations' },
@@ -777,7 +777,7 @@ export const SKILLS_DATA = [
     name: 'Infrastructure as Code (Terraform / Ansible)',
     category: 'Programming',
     sources: [
-      { type: 'work', label: 'Booz Allen — Terraform used to define range infrastructure' },
+      { type: 'work', label: 'Booz Allen — Terraform for infrastructure as code' },
       { type: 'cert', label: 'SecurityX — Security Architecture' },
       { type: 'cert', label: 'SecurityX — Security Engineering' },
     ]
@@ -861,7 +861,7 @@ export const SKILLS_DATA = [
     name: 'CTF / Cyber Range Exercises',
     category: 'Systems',
     sources: [
-      { type: 'work', label: 'Booz Allen — enterprise virtualized range environments' },
+      { type: 'work', label: 'Booz Allen — Cyber Range Engineer' },
       { type: 'work', label: 'Cole Engineering — Test Lead' },
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
       { type: 'work', label: 'MIT BWSI — Teaching Assistant' },

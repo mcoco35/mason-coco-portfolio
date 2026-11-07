@@ -228,10 +228,10 @@ function App() {
             <h2>About Me <span className="cursor-blink">_</span></h2>
             <div className="binary-divider">root@mason-coco:~/about# cat bio.txt</div>
             <p>
-              I am a network and infrastructure engineer. Across my career I have built hundreds of cyber range environments: virtualized networks and systems modeled on enterprise infrastructure. The work is routing, Linux, and virtualization.
+              I am a network and infrastructure engineer. I configure enterprise network infrastructure and routing, administer Linux, manage VMware virtualization, and use Terraform for infrastructure as code. Python and Bash cover package management and host hardening. Across my career I have built hundreds of cyber ranges.
             </p>
             <p>
-              At Booz Allen Hamilton I am a Cyber Range Engineer and Cyber Warfare Engineer. I use Terraform to define infrastructure for the environments I build, and I set routing, traffic redirectors, and SIEM monitoring so each environment behaves like the network it represents. At Cole Engineering Services I built physical servers, installed fiber-optic cabling, administered Linux over SSH, managed VMware, and automated packaging and hardening with Python and Bash, including BGP and OSPF troubleshooting. Earlier lab work is unchanged in the project log: mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
+              At Booz Allen Hamilton I am a Cyber Range Engineer and Cyber Warfare Engineer. At Cole Engineering Services I built physical servers, installed fiber-optic cabling, and troubleshot TCP/IP, DNS, BGP, and OSPF. Earlier lab work is unchanged in the project log: mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
             </p>
           </div>
         </section>
@@ -246,10 +246,10 @@ function App() {
               <p className="institution">Booz Allen Hamilton</p>
               <p className="dates">Jul 2026 - Present <span className="role-status">[ CURRENT ]</span></p>
               <ul>
-                <li>Built enterprise-style virtualized range environments and set their network infrastructure, routing, and traffic redirectors so each environment behaved like the network it modeled.</li>
-                <li>Used Terraform to define infrastructure for those environments.</li>
-                <li>Configured SIEM platforms so those environments had security monitoring.</li>
-                <li>Configured satellite equipment when a build needed that connectivity.</li>
+                <li>Configured enterprise network infrastructure, routing, and traffic redirectors.</li>
+                <li>Used Terraform for infrastructure as code.</li>
+                <li>Configured SIEM platforms for security monitoring.</li>
+                <li>Configured satellite communications equipment.</li>
               </ul>
             </div>
 
@@ -258,10 +258,10 @@ function App() {
               <p className="institution">Cole Engineering Services Inc.</p>
               <p className="dates">Sep 2025 - Jul 2026</p>
               <ul>
-                <li>Built physical servers, installed fiber-optic cabling, and maintained network infrastructure across 17 sites and 1,594 devices, with availability as the operating focus.</li>
+                <li>Built physical servers, installed fiber-optic cabling, and maintained network infrastructure across 17 sites and 1,594 devices.</li>
                 <li>Automated Linux package management and host hardening in Python and Bash, reducing patch time by 40%.</li>
                 <li>Troubleshot Tier 2 and Tier 3 connectivity for TCP/IP, DNS, and BGP and OSPF routing on a multi-vendor network.</li>
-                <li>Administered Linux systems over SSH and managed VMware resources for virtualized exercise environments.</li>
+                <li>Administered Linux systems over SSH and managed VMware virtualization.</li>
               </ul>
             </div>
 
@@ -273,7 +273,7 @@ function App() {
                 <li>Standardized QA workflows by authoring formal SOPs and managing test scripts via Git to ensure repeatable results.</li>
                 <li>Mentored a team of engineers on troubleshooting protocols and incident reporting, serving as the technical escalation point.</li>
                 <li>Performed network validation using nslookup, ping and MTR to verify TCP/IP integrity and identify latency root causes.</li>
-                <li>Tested virtualized environments and infrastructure configurations so exercise builds matched the stated requirements.</li>
+                <li>Tested virtualized infrastructure configurations against the stated requirements.</li>
               </ul>
             </div>
 
