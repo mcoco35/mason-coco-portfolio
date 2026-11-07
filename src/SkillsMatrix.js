@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SkillsMatrix.css';
 
-const SKILLS_DATA = [
+export const SKILLS_DATA = [
   // ═══════════════════════════════════════
   //  NETWORKING & INFRASTRUCTURE
   // ═══════════════════════════════════════
@@ -220,7 +220,6 @@ const SKILLS_DATA = [
     sources: [
       { type: 'cert', label: 'CompTIA PenTest+ — Engagement Management' },
       { type: 'cert', label: 'CEH — Ethical Hacking Fundamentals' },
-      { type: 'cert', label: 'CPTS — Core Methodology & Reconnaissance' },
       { type: 'education', label: 'M.S. Cybersecurity — Offensive Security & Testing' },
       { type: 'education', label: 'Bootcamp — Social Engineering and Ethical Hacking' },
       { type: 'education', label: 'Cybersecurity Bootcamp — CU Boulder' },
@@ -232,7 +231,6 @@ const SKILLS_DATA = [
     sources: [
       { type: 'cert', label: 'CEH — Scanning Networks' },
       { type: 'cert', label: 'CompTIA PenTest+ — Reconnaissance' },
-      { type: 'cert', label: 'CPTS — Network Enumeration' },
       { type: 'work', label: 'MIT BWSI — Teaching Assistant' },
       { type: 'education', label: 'M.S. Cybersecurity — Network & Infrastructure Security' },
       { type: 'education', label: 'Cybersecurity Bootcamp — CU Boulder' },
@@ -244,7 +242,6 @@ const SKILLS_DATA = [
     sources: [
       { type: 'cert', label: 'CEH — Metasploit Framework' },
       { type: 'cert', label: 'CompTIA PenTest+ — Attacks and Exploits' },
-      { type: 'cert', label: 'CPTS — Exploitation & Post-Exploitation' },
       { type: 'education', label: 'M.S. Cybersecurity — Offensive Security & Testing' },
       { type: 'education', label: 'Cybersecurity Bootcamp — CU Boulder' },
     ]
@@ -255,7 +252,6 @@ const SKILLS_DATA = [
     sources: [
       { type: 'cert', label: 'CEH — Burp Suite Proxy' },
       { type: 'cert', label: 'CompTIA PenTest+ — Vulnerability Discovery' },
-      { type: 'cert', label: 'CPTS — Web Application Exploitation' },
       { type: 'education', label: 'M.S. Cybersecurity — Offensive Security & Testing' },
     ]
   },
@@ -265,7 +261,6 @@ const SKILLS_DATA = [
     sources: [
       { type: 'cert', label: 'CEH — SQL Injection' },
       { type: 'cert', label: 'CompTIA PenTest+ — Attacks and Exploits' },
-      { type: 'cert', label: 'CPTS — Web Application Exploitation' },
       { type: 'cert', label: 'CompTIA CySA+ — Vulnerability Management' },
       { type: 'education', label: 'M.S. Cybersecurity — Offensive Security & Testing' },
     ]
@@ -276,7 +271,6 @@ const SKILLS_DATA = [
     sources: [
       { type: 'cert', label: 'CEH — Hacking Web Applications' },
       { type: 'cert', label: 'CompTIA PenTest+ — Attacks and Exploits' },
-      { type: 'cert', label: 'CPTS — Web Application Exploitation' },
       { type: 'cert', label: 'CompTIA CySA+ — Vulnerability Management' },
       { type: 'education', label: 'M.S. Cybersecurity — Offensive Security & Testing' },
     ]
@@ -305,7 +299,6 @@ const SKILLS_DATA = [
     sources: [
       { type: 'cert', label: 'CEH — all modules' },
       { type: 'cert', label: 'CompTIA PenTest+ — all domains' },
-      { type: 'cert', label: 'CPTS — all modules' },
       { type: 'education', label: 'Cybersecurity Bootcamp — CU Boulder' },
     ]
   },
@@ -324,7 +317,6 @@ const SKILLS_DATA = [
     sources: [
       { type: 'cert', label: 'CEH — Footprinting & Reconnaissance' },
       { type: 'cert', label: 'CompTIA PenTest+ — Reconnaissance' },
-      { type: 'cert', label: 'CPTS — Core Methodology & Reconnaissance' },
     ]
   },
   {
@@ -353,7 +345,6 @@ const SKILLS_DATA = [
     sources: [
       { type: 'cert', label: 'CEH — Hydra / Medusa / John the Ripper / Hashcat' },
       { type: 'cert', label: 'CompTIA PenTest+ — Attacks and Exploits' },
-      { type: 'cert', label: 'CPTS — Password Attacks' },
       { type: 'cert', label: 'CEH — System Hacking' },
       { type: 'education', label: 'M.S. Cybersecurity — Offensive Security & Testing' },
     ]
@@ -362,7 +353,6 @@ const SKILLS_DATA = [
     name: 'Active Directory Attacks',
     category: 'Offensive Security',
     sources: [
-      { type: 'cert', label: 'CPTS — AD Pentesting (Kerberoasting, DCSync, PtH)' },
       { type: 'cert', label: 'CEH — Responder (LLMNR/NBT-NS Poisoning)' },
       { type: 'cert', label: 'CompTIA PenTest+ — Attacks and Exploits' },
     ]
@@ -371,7 +361,6 @@ const SKILLS_DATA = [
     name: 'Privilege Escalation (Windows & Linux)',
     category: 'Offensive Security',
     sources: [
-      { type: 'cert', label: 'CPTS — Privilege Escalation (LinPeas, WinPeas)' },
       { type: 'cert', label: 'CEH — System Hacking' },
       { type: 'cert', label: 'CompTIA PenTest+ — Attacks and Exploits' },
       { type: 'education', label: 'M.S. Cybersecurity — Offensive Security & Testing' },
@@ -381,7 +370,6 @@ const SKILLS_DATA = [
     name: 'Pivoting & Tunneling',
     category: 'Offensive Security',
     sources: [
-      { type: 'cert', label: 'CPTS — Post-Exploitation (Chisel, Proxychains, Ligolo-ng)' },
       { type: 'cert', label: 'CompTIA PenTest+ — Post-Exploitation' },
     ]
   },
@@ -410,7 +398,6 @@ const SKILLS_DATA = [
     category: 'Offensive Security',
     sources: [
       { type: 'cert', label: 'CEH — Hacking Web Servers' },
-      { type: 'cert', label: 'CPTS — Web Application Exploitation' },
       { type: 'cert', label: 'CompTIA PenTest+ — Attacks and Exploits' },
     ]
   },
@@ -418,7 +405,6 @@ const SKILLS_DATA = [
     name: 'File Inclusion (LFI / RFI)',
     category: 'Offensive Security',
     sources: [
-      { type: 'cert', label: 'CPTS — Web Application Exploitation' },
       { type: 'cert', label: 'CEH — Hacking Web Applications' },
       { type: 'cert', label: 'CompTIA PenTest+ — Attacks and Exploits' },
     ]
@@ -428,7 +414,6 @@ const SKILLS_DATA = [
     category: 'Offensive Security',
     sources: [
       { type: 'cert', label: 'CEH — Gobuster / DirBuster' },
-      { type: 'cert', label: 'CPTS — Web Application Exploitation' },
       { type: 'cert', label: 'CompTIA PenTest+ — Vulnerability Discovery' },
     ]
   },
@@ -437,7 +422,6 @@ const SKILLS_DATA = [
     category: 'Offensive Security',
     sources: [
       { type: 'cert', label: 'CEH — Enumeration (SNMP, LDAP, NetBIOS)' },
-      { type: 'cert', label: 'CPTS — Footprinting & Attacking Common Services' },
       { type: 'cert', label: 'CompTIA PenTest+ — Reconnaissance' },
     ]
   },
@@ -474,7 +458,6 @@ const SKILLS_DATA = [
       { type: 'cert', label: 'CEH — Vulnerability Analysis' },
       { type: 'cert', label: 'CompTIA PenTest+ — Vulnerability Discovery' },
       { type: 'cert', label: 'CompTIA CySA+ — Vulnerability Management' },
-      { type: 'cert', label: 'CPTS — Network Enumeration' },
       { type: 'education', label: 'M.S. Cybersecurity — Defensive Operations (Nessus)' },
     ]
   },
@@ -482,7 +465,6 @@ const SKILLS_DATA = [
     name: 'BloodHound / Impacket / Mimikatz',
     category: 'Offensive Security',
     sources: [
-      { type: 'cert', label: 'CPTS — Active Directory Penetration Testing' },
       { type: 'cert', label: 'CEH — Responder / System Hacking' },
     ]
   },
@@ -491,7 +473,6 @@ const SKILLS_DATA = [
     category: 'Offensive Security',
     sources: [
       { type: 'cert', label: 'CEH — Netcat / Ncat (Backdoors)' },
-      { type: 'cert', label: 'CPTS — Exploitation & Post-Exploitation' },
       { type: 'cert', label: 'CompTIA PenTest+ — Post-Exploitation' },
       { type: 'education', label: 'Cybersecurity Bootcamp — CU Boulder' },
       { type: 'education', label: 'M.S. Cybersecurity — Offensive Security & Testing' },
@@ -502,7 +483,6 @@ const SKILLS_DATA = [
     category: 'Offensive Security',
     sources: [
       { type: 'cert', label: 'CEH — Scanning Networks' },
-      { type: 'cert', label: 'CPTS — Network Enumeration' },
       { type: 'education', label: 'M.S. Cybersecurity — Network & Infrastructure Security' },
     ]
   },
@@ -618,7 +598,6 @@ const SKILLS_DATA = [
     category: 'Defense',
     sources: [
       { type: 'cert', label: 'CompTIA CySA+ — Vulnerability Management' },
-      { type: 'cert', label: 'CPTS — Documentation & Reporting' },
       { type: 'cert', label: 'SecurityX — Security Engineering' },
     ]
   },
@@ -760,7 +739,6 @@ const SKILLS_DATA = [
     sources: [
       { type: 'education', label: 'B.S. Computer Science — Database Systems' },
       { type: 'cert', label: 'CEH — SQL Injection' },
-      { type: 'cert', label: 'CPTS — Footprinting & Attacking Common Services' },
     ]
   },
   {
@@ -819,7 +797,6 @@ const SKILLS_DATA = [
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
       { type: 'work', label: 'MIT BWSI — Teaching Assistant' },
       { type: 'cert', label: 'CompTIA A+ — Operating Systems' },
-      { type: 'cert', label: 'CPTS — Privilege Escalation' },
       { type: 'education', label: 'B.S. Computer Science — Operating Systems (Linux/Unix)' },
     ]
   },
@@ -837,7 +814,6 @@ const SKILLS_DATA = [
     name: 'Active Directory / LDAP / Group Policy',
     category: 'Systems',
     sources: [
-      { type: 'cert', label: 'CPTS — Active Directory Penetration Testing' },
       { type: 'cert', label: 'CompTIA Security+ — Security Operations' },
       { type: 'cert', label: 'CompTIA Network+ — Network Security' },
       { type: 'education', label: 'Bootcamp — Microsoft Security System Administration' },
@@ -885,7 +861,6 @@ const SKILLS_DATA = [
       { type: 'work', label: 'Cole Engineering — Test Lead' },
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
       { type: 'work', label: 'MIT BWSI — Teaching Assistant' },
-      { type: 'cert', label: 'CPTS (In Progress)' },
     ]
   },
   {
@@ -934,7 +909,6 @@ const SKILLS_DATA = [
       { type: 'cert', label: 'SecurityX — Governance, Risk, and Compliance' },
       { type: 'cert', label: 'CompTIA Security+ — Security Program Oversight' },
       { type: 'cert', label: 'CompTIA CySA+ — Reporting & Communication' },
-      { type: 'cert', label: 'CPTS — Documentation & Reporting' },
       { type: 'education', label: 'M.S. Cybersecurity — Governance, Risk & Architecture' },
     ]
   },
@@ -1002,7 +976,6 @@ const SKILLS_DATA = [
     category: 'Governance',
     sources: [
       { type: 'cert', label: 'CompTIA PenTest+ — Engagement Management' },
-      { type: 'cert', label: 'CPTS — Documentation & Reporting (Sysreptor, PwnDoc)' },
       { type: 'cert', label: 'CompTIA CySA+ — Reporting & Communication' },
       { type: 'education', label: 'M.S. Cybersecurity — Leadership & Integration (Capstone)' },
     ]
@@ -1098,6 +1071,7 @@ function SkillsMatrix() {
           onChange={(e) => setSearch(e.target.value)}
           placeholder="search skills..."
           className="search-input"
+          aria-label="Search skills"
         />
         <span className="search-prompt">" skills.db</span>
       </div>
@@ -1106,7 +1080,9 @@ function SkillsMatrix() {
         {CATEGORIES.map(cat => (
           <button
             key={cat}
+            type="button"
             className={`category-btn ${activeCategory === cat ? 'active' : ''}`}
+            aria-pressed={activeCategory === cat}
             onClick={() => setActiveCategory(cat)}
           >
             {cat}
@@ -1124,7 +1100,16 @@ function SkillsMatrix() {
           <div
             key={skill.name}
             className={`skill-card ${expandedSkill === skill.name ? 'expanded' : ''}`}
+            role="button"
+            tabIndex={0}
+            aria-expanded={expandedSkill === skill.name}
             onClick={() => toggleSkill(skill.name)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleSkill(skill.name);
+              }
+            }}
           >
             <div className="skill-card-header">
               <span className="skill-name">{skill.name}</span>
@@ -1157,6 +1142,7 @@ function SkillsMatrix() {
 
       {!search && filteredSkills.length > PREVIEW_COUNT && (
         <button
+          type="button"
           className="show-more-btn"
           onClick={() => setShowAll(!showAll)}
         >
