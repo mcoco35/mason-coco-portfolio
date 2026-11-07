@@ -157,6 +157,7 @@ export const SKILLS_DATA = [
     name: 'Cabling & Connectors',
     category: 'Networking',
     sources: [
+      { type: 'work', label: 'Cole Engineering — fiber-optic cabling installation' },
       { type: 'cert', label: 'CompTIA A+ — Hardware' },
       { type: 'cert', label: 'CompTIA Network+ — Networking Concepts' },
       { type: 'cert', label: 'CompTIA Network+ — Network Troubleshooting' },
@@ -776,6 +777,7 @@ export const SKILLS_DATA = [
     name: 'Infrastructure as Code (Terraform / Ansible)',
     category: 'Programming',
     sources: [
+      { type: 'work', label: 'Booz Allen — Terraform used to define range infrastructure' },
       { type: 'cert', label: 'SecurityX — Security Architecture' },
       { type: 'cert', label: 'SecurityX — Security Engineering' },
     ]

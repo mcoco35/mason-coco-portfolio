@@ -9,17 +9,25 @@ test('renders network engineering copy and the official Booz title', () => {
   const booz = screen.getByRole('heading', { name: /Cyber Range Engineer \/ Cyber Warfare Engineer/i }).closest('.education-entry');
   expect(booz).toHaveTextContent(/Booz Allen Hamilton/);
   expect(booz).toHaveTextContent(/Jul 2026 - Present/);
-  expect(booz).toHaveTextContent(/Built cyber range environments that model enterprise infrastructure/);
-  expect(booz).toHaveTextContent(/Configured enterprise network infrastructure and routing/);
-  expect(booz).toHaveTextContent(/Configured redirectors for traffic redirection/);
-  expect(booz).toHaveTextContent(/Configured satellite equipment used by those environments/);
-  expect(booz).toHaveTextContent(/Configured SIEM platforms for security monitoring/);
+  expect(booz).toHaveTextContent(/network infrastructure, routing, and traffic redirectors/);
+  expect(booz).toHaveTextContent(/Used Terraform to define infrastructure/);
+  expect(booz).toHaveTextContent(/SIEM platforms so those environments had security monitoring/);
+  expect(booz).toHaveTextContent(/satellite equipment when a build needed that connectivity/);
+  expect(booz).not.toHaveTextContent(/hundreds/i);
   expect(booz).not.toHaveTextContent(/1,594/);
   expect(booz).not.toHaveTextContent(/40%/);
   expect(booz).not.toHaveTextContent(/BGP/);
   expect(booz).not.toHaveTextContent(/Bash/);
+  expect(booz).not.toHaveTextContent(/fiber/i);
+  const about = document.querySelector('#about');
+  expect(about).toHaveTextContent(/hundreds of cyber range environments/);
+  expect(about).toHaveTextContent(/Terraform/);
+  const cole = screen.getByRole('heading', { name: 'Cyber Security Systems Engineer' }).closest('.education-entry');
+  expect(cole).toHaveTextContent(/Built physical servers, installed fiber-optic cabling/);
+  expect(cole).toHaveTextContent(/17 sites and 1,594 devices/);
+  expect(cole).toHaveTextContent(/40%/);
+  expect(cole).toHaveTextContent(/BGP and OSPF/);
   expect(screen.getByText(/Sep 2025 - Jul 2026/)).toBeInTheDocument();
-  expect(screen.getByText(/1,594 devices/)).toBeInTheDocument();
 });
 
 test('lists earned certifications and omits CPTS and CISM pursuit', () => {
@@ -55,4 +63,13 @@ test('skills evidence does not cite CPTS or CISM', () => {
   expect(JSON.stringify(siem.sources)).toMatch(/Booz Allen — SIEM configuration/);
   const ranges = SKILLS_DATA.find(skill => skill.name.startsWith('CTF'));
   expect(JSON.stringify(ranges.sources)).toMatch(/enterprise virtualized range environments/);
+  const iac = SKILLS_DATA.find(skill => skill.name.startsWith('Infrastructure as Code'));
+  expect(JSON.stringify(iac.sources)).toMatch(/Booz Allen — Terraform used to define range infrastructure/);
+  expect(JSON.stringify(iac.sources)).not.toMatch(/module|pipeline|faster/i);
+  const python = SKILLS_DATA.find(skill => skill.name === 'Python');
+  expect(JSON.stringify(python.sources)).not.toMatch(/Booz/i);
+  const bash = SKILLS_DATA.find(skill => skill.name.startsWith('Bash'));
+  expect(JSON.stringify(bash.sources)).not.toMatch(/Booz/i);
+  const cabling = SKILLS_DATA.find(skill => skill.name.startsWith('Cabling'));
+  expect(JSON.stringify(cabling.sources)).toMatch(/Cole Engineering — fiber-optic cabling installation/);
 });
