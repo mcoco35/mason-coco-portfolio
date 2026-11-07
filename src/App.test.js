@@ -9,8 +9,8 @@ test('renders network engineering copy and the official Booz title', () => {
   const booz = screen.getByRole('heading', { name: /Cyber Range Engineer \/ Cyber Warfare Engineer/i }).closest('.education-entry');
   expect(booz).toHaveTextContent(/Booz Allen Hamilton/);
   expect(booz).toHaveTextContent(/Jul 2026 - Present/);
-  expect(booz).toHaveTextContent(/Configured enterprise network infrastructure, routing, and traffic redirectors/);
-  expect(booz).toHaveTextContent(/Used Terraform for infrastructure as code/);
+  expect(booz).toHaveTextContent(/Configured enterprise network infrastructure, routing, and traffic redirectors, and set the paths traffic followed/);
+  expect(booz).toHaveTextContent(/Applied Terraform as infrastructure as code to define network infrastructure/);
   expect(booz).toHaveTextContent(/Configured SIEM platforms for security monitoring/);
   expect(booz).toHaveTextContent(/Configured satellite communications equipment/);
   expect(booz).not.toHaveTextContent(/hundreds/i);
@@ -20,16 +20,20 @@ test('renders network engineering copy and the official Booz title', () => {
   expect(booz).not.toHaveTextContent(/BGP/);
   expect(booz).not.toHaveTextContent(/Bash/);
   expect(booz).not.toHaveTextContent(/fiber/i);
+  expect(booz).not.toHaveTextContent(/Agile|DevOps/i);
   const about = document.querySelector('#about');
   expect(about).toHaveTextContent(/hundreds of cyber ranges/);
   expect(about).toHaveTextContent(/Terraform/);
+  expect(about).toHaveTextContent(/BGP and OSPF/);
+  expect(about).not.toHaveTextContent(/Agile|DevOps|4\+ years/i);
   const cole = screen.getByRole('heading', { name: 'Cyber Security Systems Engineer' }).closest('.education-entry');
-  expect(cole).toHaveTextContent(/Built physical servers, installed fiber-optic cabling/);
+  const coleItems = [...cole.querySelectorAll('li')].map((li) => li.textContent);
+  expect(coleItems[0]).toMatch(/BGP, and OSPF/);
+  expect(coleItems[1]).toMatch(/reducing patch time by 40%/);
+  expect(coleItems.some((item) => /17 sites and 1,594 devices/.test(item) && !/fiber|servers/.test(item))).toBe(true);
+  expect(coleItems.some((item) => /fiber-optic cabling/.test(item) && !/1,594/.test(item))).toBe(true);
   expect(cole).toHaveTextContent(/managed VMware virtualization/);
   expect(cole).not.toHaveTextContent(/exercise environments/i);
-  expect(cole).toHaveTextContent(/17 sites and 1,594 devices/);
-  expect(cole).toHaveTextContent(/40%/);
-  expect(cole).toHaveTextContent(/BGP and OSPF/);
   expect(screen.getByText(/Sep 2025 - Jul 2026/)).toBeInTheDocument();
 });
 

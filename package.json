@@ -4,7 +4,7 @@
   "private": true,
   "author": "Mason Coco",
   "homepage": "https://mason-coco.com",
-  "description": "Portfolio for Mason Coco, a network and infrastructure engineer. Networking, routing, Linux, VMware, and Terraform.",
+  "description": "Portfolio for Mason Coco, a network and infrastructure engineer. BGP and OSPF routing, Linux administration, Python and Bash automation, and Terraform.",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",

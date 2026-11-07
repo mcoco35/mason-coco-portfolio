@@ -228,10 +228,10 @@ function App() {
             <h2>About Me <span className="cursor-blink">_</span></h2>
             <div className="binary-divider">root@mason-coco:~/about# cat bio.txt</div>
             <p>
-              I am a network and infrastructure engineer. I configure enterprise network infrastructure and routing, administer Linux, manage VMware virtualization, and use Terraform for infrastructure as code. Python and Bash cover package management and host hardening. Across my career I have built hundreds of cyber ranges.
+              I am a network and infrastructure engineer. I troubleshoot enterprise routing with BGP and OSPF, administer Linux over SSH, and automate package management and host hardening in Python and Bash. I use Terraform for infrastructure as code. Across my career I have built hundreds of cyber ranges.
             </p>
             <p>
-              At Booz Allen Hamilton I am a Cyber Range Engineer and Cyber Warfare Engineer. At Cole Engineering Services I built physical servers, installed fiber-optic cabling, and troubleshot TCP/IP, DNS, BGP, and OSPF. Earlier lab work is unchanged in the project log: mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
+              At Booz Allen Hamilton I am a Cyber Range Engineer and Cyber Warfare Engineer. At Cole Engineering Services I resolved Tier 2 and Tier 3 faults on multi-vendor IP networks and cut Linux patch time by 40%. Earlier lab work is unchanged in the project log: mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
             </p>
           </div>
         </section>
@@ -246,8 +246,8 @@ function App() {
               <p className="institution">Booz Allen Hamilton</p>
               <p className="dates">Jul 2026 - Present <span className="role-status">[ CURRENT ]</span></p>
               <ul>
-                <li>Configured enterprise network infrastructure, routing, and traffic redirectors.</li>
-                <li>Used Terraform for infrastructure as code.</li>
+                <li>Configured enterprise network infrastructure, routing, and traffic redirectors, and set the paths traffic followed.</li>
+                <li>Applied Terraform as infrastructure as code to define network infrastructure.</li>
                 <li>Configured SIEM platforms for security monitoring.</li>
                 <li>Configured satellite communications equipment.</li>
               </ul>
@@ -258,10 +258,11 @@ function App() {
               <p className="institution">Cole Engineering Services Inc.</p>
               <p className="dates">Sep 2025 - Jul 2026</p>
               <ul>
-                <li>Built physical servers, installed fiber-optic cabling, and maintained network infrastructure across 17 sites and 1,594 devices.</li>
+                <li>Troubleshot and resolved Tier 2 and Tier 3 connectivity faults across TCP/IP, DNS, BGP, and OSPF on a multi-vendor network.</li>
                 <li>Automated Linux package management and host hardening in Python and Bash, reducing patch time by 40%.</li>
-                <li>Troubleshot Tier 2 and Tier 3 connectivity for TCP/IP, DNS, and BGP and OSPF routing on a multi-vendor network.</li>
                 <li>Administered Linux systems over SSH and managed VMware virtualization.</li>
+                <li>Maintained network infrastructure across 17 sites and 1,594 devices.</li>
+                <li>Built physical servers and installed fiber-optic cabling.</li>
               </ul>
             </div>
 
