@@ -195,9 +195,8 @@ function App() {
               {'╚══════════════════════════════════════╝'}
             </div>
             <div className="typing-wrapper">
-              <p className="typing-effect">Cyber Range Engineer</p>
+              <p className="typing-effect">Network &amp; Infrastructure Engineering</p>
             </div>
-            <p className="hero-role-note">Cyber Warfare Engineer //<br className="mobile-break" /> Booz Allen Hamilton</p>
             <div className="hero-terminal">
               <div className="terminal-header">
                 <span className="terminal-dot red" />
@@ -229,10 +228,10 @@ function App() {
             <h2>About Me <span className="cursor-blink">_</span></h2>
             <div className="binary-divider">root@mason-coco:~/about# cat bio.txt</div>
             <p>
-              I am a cyber range engineer with a foundation in software, systems, and network operations. I still care about quality-first work: careful builds, readable automation, and infrastructure that stays up when an exercise depends on it.
+              I work in network and infrastructure engineering. I build virtualized environments that model enterprise networks, then configure routing, traffic paths, and security monitoring so those environments behave like the infrastructure they represent.
             </p>
             <p>
-              At Cole Engineering Services I administered Linux hosts over SSH, supported VMware cyber ranges, and handled Tier 2/3 connectivity across TCP/IP, DNS, BGP, and OSPF. I automated Linux package management and system hardening with Bash and Python, and earlier led test engineering there: SOPs, Git-managed test scripts, mentoring, and technical escalation. I now work as a Cyber Range Engineer and Cyber Warfare Engineer at Booz Allen Hamilton. The through-line is network and systems engineering. Older lab work remains on record: mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
+              At Booz Allen Hamilton I am a Cyber Range Engineer and Cyber Warfare Engineer. A cyber range, in this work, is an enterprise-style virtualized environment. I configure its network infrastructure and routing, redirectors, satellite equipment, and SIEM platforms for security monitoring. Before that, at Cole Engineering Services, I administered Linux over SSH, managed VMware, automated package management and hardening with Bash and Python, and troubleshot TCP/IP, DNS, BGP, and OSPF. Earlier lab work is unchanged in the project log: mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
             </p>
           </div>
         </section>
@@ -246,6 +245,13 @@ function App() {
               <h3>Cyber Range Engineer / Cyber Warfare Engineer</h3>
               <p className="institution">Booz Allen Hamilton</p>
               <p className="dates">Jul 2026 - Present <span className="role-status">[ CURRENT ]</span></p>
+              <ul>
+                <li>Built cyber range environments that model enterprise infrastructure as virtualized networks and systems.</li>
+                <li>Configured enterprise network infrastructure and routing for those environments.</li>
+                <li>Configured redirectors for traffic redirection.</li>
+                <li>Configured satellite equipment used by those environments.</li>
+                <li>Configured SIEM platforms for security monitoring.</li>
+              </ul>
             </div>
 
             <div className="education-entry">
@@ -253,10 +259,10 @@ function App() {
               <p className="institution">Cole Engineering Services Inc.</p>
               <p className="dates">Sep 2025 - Jul 2026</p>
               <ul>
-                <li>Deployed and maintained network infrastructure across 17 sites and 1,594 devices, ensuring high availability.</li>
-                <li>Automated Linux package management and system hardening using Bash and Python, reducing patch times by 40%.</li>
-                <li>Resolved Tier 2/3 network connectivity issues across TCP/IP, DNS, BGP, and OSPF in a multi-vendor environment.</li>
-                <li>Administered Linux servers via SSH and CLI, managing VMware virtualization resources to support cyber range operations.</li>
+                <li>Deployed and maintained network infrastructure across 17 sites and 1,594 devices, with availability as the operating focus.</li>
+                <li>Automated Linux package management and host hardening in Bash and Python, reducing patch time by 40%.</li>
+                <li>Troubleshot Tier 2 and Tier 3 connectivity for TCP/IP, DNS, and BGP and OSPF routing on a multi-vendor network.</li>
+                <li>Administered Linux systems over SSH and managed VMware resources for virtualized exercise environments.</li>
               </ul>
             </div>
 
@@ -268,7 +274,7 @@ function App() {
                 <li>Standardized QA workflows by authoring formal SOPs and managing test scripts via Git to ensure repeatable results.</li>
                 <li>Mentored a team of engineers on troubleshooting protocols and incident reporting, serving as the technical escalation point.</li>
                 <li>Performed network validation using nslookup, ping and MTR to verify TCP/IP integrity and identify latency root causes.</li>
-                <li>Tested virtualized environments and infrastructure configurations for cyber exercises to align with customer requirements.</li>
+                <li>Tested virtualized environments and infrastructure configurations so exercise builds matched the stated requirements.</li>
               </ul>
             </div>
 
@@ -277,7 +283,7 @@ function App() {
               <p className="institution">MIT Beaver Works Summer Institute</p>
               <p className="dates">Jun 2022 - Aug 2024</p>
               <ul>
-                <li>Provisioned and administered Linux-based virtual machines for CTF environments, ensuring system uptime for students.</li>
+                <li>Provisioned and administered Linux-based virtual machines for CTF environments so students had working lab machines.</li>
                 <li>Delivered technical training on Cyber Operations, simplifying complex encryption and defense concepts to diverse audiences.</li>
                 <li>Conducted QA on third-party lab materials to identify and patch configuration vulnerabilities before deployment.</li>
               </ul>

@@ -290,24 +290,9 @@ body::before {
 }
 
 .typing-wrapper {
-  margin-bottom: 0.35rem;
+  margin-bottom: 2rem;
   display: inline-block;
   max-width: 100%;
-}
-
-.hero-role-note {
-  color: var(--term-cyan);
-  font-size: 0.95rem;
-  letter-spacing: 0.06em;
-  margin: 0.35rem 0 2rem;
-  opacity: 0;
-  animation: fadeTerm 0.5s ease forwards;
-  animation-delay: 1.05s;
-  max-width: 100%;
-}
-
-.mobile-break {
-  display: none;
 }
 
 .typing-effect {
@@ -857,20 +842,10 @@ textarea:focus-visible {
     white-space: nowrap;
   }
 
-  .mobile-break {
-    display: inline;
-  }
-
   .typing-effect {
-    font-size: 0.95rem;
-    letter-spacing: 0.04em;
+    font-size: clamp(0.72rem, 3.4vw, 0.95rem);
+    letter-spacing: 0.02em;
     max-width: 100%;
-  }
-
-  .hero-role-note {
-    font-size: 0.78rem;
-    letter-spacing: 0.03em;
-    padding: 0 0.5rem;
   }
 
   .hero-section {
