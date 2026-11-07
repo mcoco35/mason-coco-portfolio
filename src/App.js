@@ -6,6 +6,7 @@ import SkillsMatrix from './SkillsMatrix';
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isNarrow, setIsNarrow] = useState(false);
   const canvasRef = useRef(null);
 
   const toggleMobileMenu = () => {
@@ -53,6 +54,10 @@ function App() {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
 
     let animationId;
     const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEF{}[]<>/\\|!@#$%^&*';
@@ -115,14 +120,18 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768 && isMobileMenuOpen) {
+    if (!window.matchMedia) return undefined;
+    const mq = window.matchMedia('(max-width: 768px)');
+    const sync = () => {
+      setIsNarrow(mq.matches);
+      if (!mq.matches) {
         setIsMobileMenuOpen(false);
       }
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [isMobileMenuOpen]);
+    sync();
+    mq.addEventListener('change', sync);
+    return () => mq.removeEventListener('change', sync);
+  }, []);
 
   const navLinks = [
     { id: 'about', title: 'About Me' },
@@ -134,19 +143,30 @@ function App() {
     { id: 'contact', title: 'Contact' },
   ];
 
+  const mobileNavClosed = isNarrow && !isMobileMenuOpen;
+
   return (
     <div className={`App ${isMobileMenuOpen ? 'no-scroll' : ''}`}>
+      <a href="#about" className="skip-link" onClick={(e) => handleNavLinkClick(e, 'about')}>
+        Skip to content
+      </a>
       <header className="app-header">
         <div className="logo">Mason Coco</div>
         <button
           className="mobile-nav-toggle"
-          aria-label="Toggle navigation"
+          aria-label={isMobileMenuOpen ? 'Close navigation' : 'Open navigation'}
           aria-expanded={isMobileMenuOpen}
+          aria-controls="site-navigation"
           onClick={toggleMobileMenu}
         >
           <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
         </button>
-        <nav className={`app-nav ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+        <nav
+          id="site-navigation"
+          className={`app-nav ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}
+          aria-hidden={mobileNavClosed}
+          inert={mobileNavClosed}
+        >
           <ul>
             {navLinks.map(link => (
               <li key={link.id}>
@@ -175,8 +195,9 @@ function App() {
               {'╚══════════════════════════════════════╝'}
             </div>
             <div className="typing-wrapper">
-              <p className="typing-effect">Cyber Security Systems Engineer</p>
+              <p className="typing-effect">Cyber Range Engineer</p>
             </div>
+            <p className="hero-role-note">Cyber Warfare Engineer //<br className="mobile-break" /> Booz Allen Hamilton</p>
             <div className="hero-terminal">
               <div className="terminal-header">
                 <span className="terminal-dot red" />
@@ -208,12 +229,10 @@ function App() {
             <h2>About Me <span className="cursor-blink">_</span></h2>
             <div className="binary-divider">root@mason-coco:~/about# cat bio.txt</div>
             <p>
-              I am a cybersecurity professional dedicated to leveraging technology to solve complex challenges.
-              My journey began with a strong foundation in software development, where I honed my skills in creating robust, secure applications. I have a passion for quality-first development, ensuring that every line of code is crafted with precision and care.
+              I am a cyber range engineer with a foundation in software, systems, and network operations. I still care about quality-first work: careful builds, readable automation, and infrastructure that stays up when an exercise depends on it.
             </p>
             <p>
-              Some of my past projects include in-depth mobile device security (encompassing firmware modification and analysis), the development of AI-integrated applications, and the continuous refinement of web applications like this portfolio.
-              This foundation in rigorous development and problem-solving now fuels my increasing focus and passion for System Architecture and Offensive Security. I am eager to apply my creative problem-solving skills and quality-first mindset to these domains, contribute to innovative projects, and help advance technological frontiers.
+              At Cole Engineering Services I administered Linux hosts over SSH, supported VMware cyber ranges, and handled Tier 2/3 connectivity across TCP/IP, DNS, BGP, and OSPF. I automated Linux package management and system hardening with Bash and Python, and earlier led test engineering there: SOPs, Git-managed test scripts, mentoring, and technical escalation. I now work as a Cyber Range Engineer and Cyber Warfare Engineer at Booz Allen Hamilton. The through-line is network and systems engineering. Older lab work remains on record: mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
             </p>
           </div>
         </section>
@@ -224,9 +243,15 @@ function App() {
             <div className="binary-divider">root@mason-coco:~/work-history# ./log.sh</div>
 
             <div className="education-entry">
+              <h3>Cyber Range Engineer / Cyber Warfare Engineer</h3>
+              <p className="institution">Booz Allen Hamilton</p>
+              <p className="dates">Jul 2026 - Present <span className="role-status">[ CURRENT ]</span></p>
+            </div>
+
+            <div className="education-entry">
               <h3>Cyber Security Systems Engineer</h3>
               <p className="institution">Cole Engineering Services Inc.</p>
-              <p className="dates">Sep 2025 - Present</p>
+              <p className="dates">Sep 2025 - Jul 2026</p>
               <ul>
                 <li>Deployed and maintained network infrastructure across 17 sites and 1,594 devices, ensuring high availability.</li>
                 <li>Automated Linux package management and system hardening using Bash and Python, reducing patch times by 40%.</li>
@@ -286,7 +311,7 @@ function App() {
               <p className="dates">Mar 2025</p>
             </div>
             <div className="education-entry">
-              <h3>B.S. Computer Science</h3>
+              <h3>B.S. Computer Science, Network &amp; Security</h3>
               <p className="institution">Colorado State University - Fort Collins, CO</p>
               <p className="dates">Aug 2024</p>
             </div>
@@ -299,23 +324,19 @@ function App() {
             <div className="binary-divider">root@mason-coco:~/certifications# ./status.sh</div>
             <ul className="certifications-list">
               <li>
-                <em>HTB Certified Penetration Testing Specialist (CPTS)</em>
-                <span className="certification-date">In Progress</span>
-              </li>
-              <li>
-                <strong>CompTIA SecurityX</strong>
+                <strong>CompTIA SecurityX (CASP+)</strong>
                 <span className="certification-date">July 2025</span>
               </li>
               <li>
-                <strong>CompTIA CYSA+</strong>
+                <strong>CompTIA CySA+</strong>
                 <span className="certification-date">April 2025</span>
               </li>
               <li>
-                <strong> EC-Council Certified Ethical Hacker Master</strong>
+                <strong>EC-Council Certified Ethical Hacker Master</strong>
                 <span className="certification-date">February 2025</span>
               </li>
               <li>
-                <strong>CompTIA Pentest+</strong>
+                <strong>CompTIA PenTest+</strong>
                 <span className="certification-date">September 2024</span>
               </li>
               <li>
@@ -343,7 +364,6 @@ function App() {
               <p>
                 Successfully performed rooting, jailbreaking, and custom ROM installations on diverse mobile/embedded devices, demonstrating expertise in system vulnerability exploitation and advanced OS customization. Key project: Rooted an Oculus Quest Go for NUILab research, enabling deeper system access.
               </p>
-              <br />
             </div>
 
             <div className="project-card">
@@ -370,14 +390,14 @@ function App() {
             <div className="project-card">
               <h3>Anonymous Web Browse Application</h3>
               <p>
-                Created an application to facilitate anonymous web Browse by routing traffic through multiple proxy nodes, prioritizing user privacy and mitigating online tracking.
+                Created an application to facilitate anonymous web browsing by routing traffic through multiple proxy nodes, prioritizing user privacy and mitigating online tracking.
               </p>
             </div>
 
             <div className="project-card">
               <h3>Encrypted ”Telephone” Messaging</h3>
               <p>
-                Worked within a team to create an encrypted messaging application inspired by the ”telephone” game, employing various encryption techniques to secure communications layer by layer.
+                Worked within a team to create an encrypted messaging application inspired by the "telephone" game, employing various encryption techniques to secure communications layer by layer.
               </p>
             </div>
           </div>
@@ -397,9 +417,12 @@ function App() {
             <div className="binary-divider">root@mason-coco:~/contact# nc -nv 127.0.0.1 4444</div>
             <div className="contact-form-container">
               <form action="https://formspree.io/f/xleqykrp" method="post" className="contact-actual-form">
-                <input type="text" name="Name" required placeholder="Your Name" />
-                <input name="Email" id="email" type="email" required placeholder="Your Email" />
-                <textarea name="Message" required placeholder="Your Message" className="message-input"></textarea>
+                <label className="visually-hidden" htmlFor="contact-name">Your Name</label>
+                <input id="contact-name" type="text" name="Name" required placeholder="Your Name" autoComplete="name" />
+                <label className="visually-hidden" htmlFor="email">Your Email</label>
+                <input name="Email" id="email" type="email" required placeholder="Your Email" autoComplete="email" />
+                <label className="visually-hidden" htmlFor="contact-message">Your Message</label>
+                <textarea id="contact-message" name="Message" required placeholder="Your Message" className="message-input"></textarea>
                 <button type="submit" className="submit-button">Send Message</button>
               </form>
             </div>

@@ -4,7 +4,7 @@
   "private": true,
   "author": "Mason Coco",
   "homepage": "https://mason-coco.com",
-  "description": "A portfolio website for Mason Coco, showcasing projects and skills.",
+  "description": "Portfolio website for Mason Coco, a cyber range engineer.",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
