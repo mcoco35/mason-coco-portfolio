@@ -9,8 +9,9 @@ test('renders network engineering copy and the official Booz title', () => {
   const booz = screen.getByRole('heading', { name: /Cyber Range Engineer \/ Cyber Warfare Engineer/i }).closest('.education-entry');
   expect(booz).toHaveTextContent(/Booz Allen Hamilton/);
   expect(booz).toHaveTextContent(/Jul 2026 - Present/);
-  expect(booz).toHaveTextContent(/Configured enterprise network infrastructure, routing, and traffic redirectors, and set the paths traffic followed/);
-  expect(booz).toHaveTextContent(/Applied Terraform as infrastructure as code to define network infrastructure/);
+  expect(booz).toHaveTextContent(/Configured enterprise network infrastructure, routing, and traffic redirectors\./);
+  expect(booz).toHaveTextContent(/Used Terraform for infrastructure as code/);
+  expect(booz).not.toHaveTextContent(/paths traffic followed|define network infrastructure/i);
   expect(booz).toHaveTextContent(/Configured SIEM platforms for security monitoring/);
   expect(booz).toHaveTextContent(/Configured satellite communications equipment/);
   expect(booz).not.toHaveTextContent(/hundreds/i);

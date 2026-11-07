@@ -246,8 +246,8 @@ function App() {
               <p className="institution">Booz Allen Hamilton</p>
               <p className="dates">Jul 2026 - Present <span className="role-status">[ CURRENT ]</span></p>
               <ul>
-                <li>Configured enterprise network infrastructure, routing, and traffic redirectors, and set the paths traffic followed.</li>
-                <li>Applied Terraform as infrastructure as code to define network infrastructure.</li>
+                <li>Configured enterprise network infrastructure, routing, and traffic redirectors.</li>
+                <li>Used Terraform for infrastructure as code.</li>
                 <li>Configured SIEM platforms for security monitoring.</li>
                 <li>Configured satellite communications equipment.</li>
               </ul>
