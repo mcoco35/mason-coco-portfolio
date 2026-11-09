@@ -30,7 +30,9 @@ test('renders network engineering copy and the official Booz title', () => {
   const about = document.querySelector('#about');
   expect(about).toHaveTextContent(/hundreds of cyber ranges/);
   expect(about).toHaveTextContent(/Terraform/);
-  expect(about).toHaveTextContent(/BGP and OSPF/);
+  expect(about).toHaveTextContent(/BGP, OSPF, VLANs, and NAT on Vyatta and pfSense/);
+  expect(about).toHaveTextContent(/active TS\/SCI clearance/);
+  expect(about).not.toHaveTextContent(/multi-vendor|Cyber Warfare Engineer/i);
   expect(about).toHaveTextContent(/Vyatta and pfSense/);
   expect(about).not.toHaveTextContent(/Agile|DevOps|4\+ years/i);
   const coleHeadings = screen.getAllByRole('heading', { name: 'Range Engineer / Cyber Security Systems Engineer' });

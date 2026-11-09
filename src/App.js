@@ -228,10 +228,10 @@ function App() {
             <h2>About Me <span className="cursor-blink">_</span></h2>
             <div className="binary-divider">root@mason-coco:~/about# cat bio.txt</div>
             <p>
-              I am a network and infrastructure engineer. I troubleshoot BGP and OSPF, configure static routes, NAT, and firewall rules on Vyatta and pfSense, administer Linux over SSH, and automate with Python and Bash. I use Terraform for infrastructure as code. Across my career I have built hundreds of cyber ranges.
+              I'm a network and infrastructure engineer with an active TS/SCI clearance. I design and troubleshoot routed networks with BGP, OSPF, VLANs, and NAT on Vyatta and pfSense, administer Linux and Windows infrastructure, and automate builds and operations with Python, Bash, Terraform, Ansible/Puppet, and Docker. Across my career I've built hundreds of cyber ranges end to end, from enterprise routing to monitoring with Suricata, Zeek, Elastic, Security Onion, and Splunk.
             </p>
             <p>
-              At Booz Allen Hamilton I am a Cyber Range Engineer. At Cole Engineering Services I resolved Tier 2 and Tier 3 faults on Vyatta and pfSense and cut Linux patch time by 40%. Earlier lab work is unchanged in the project log: mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
+              At Booz Allen Hamilton I'm a Cyber Range Engineer. At Cole Engineering Services, as a Range Engineer / Cyber Security Systems Engineer, I resolved Tier 2 and Tier 3 routing and DNS faults, maintained infrastructure across 17 sites and 1,594 devices, and cut Linux patch time by 40% with Python and Bash automation. My project log covers mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
             </p>
           </div>
         </section>
