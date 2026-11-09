@@ -28,6 +28,8 @@ test('renders network engineering copy and the official Booz title', () => {
   expect(booz).not.toHaveTextContent(/\bBGP\b/);
   expect(booz).not.toHaveTextContent(/fiber/i);
   const about = document.querySelector('#about');
+  expect(about).toHaveTextContent(/I'm a Cyber Range Engineer with an active TS\/SCI clearance who designs, builds, and operates the networks and infrastructure behind cyber training environments/);
+  expect(about).not.toHaveTextContent(/network and infrastructure engineer/i);
   expect(about).toHaveTextContent(/hundreds of cyber ranges/);
   expect(about).toHaveTextContent(/Terraform/);
   expect(about).toHaveTextContent(/BGP, OSPF, VLANs, and NAT on Vyatta and pfSense/);
