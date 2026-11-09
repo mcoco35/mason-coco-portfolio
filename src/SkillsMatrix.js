@@ -913,11 +913,11 @@ export const SKILLS_DATA = [
     ]
   },
   {
-    name: 'On-call Event Support',
+    name: 'On-call Production Operations',
     category: 'Systems',
     sources: [
-      { type: 'work', label: 'Booz Allen — on-call support during live events' },
-      { type: 'work', label: 'Cole Engineering — on-call support during live events' },
+      { type: 'work', label: 'Booz Allen — on-call support during production operations' },
+      { type: 'work', label: 'Cole Engineering — on-call support during production operations' },
     ]
   },
   {
