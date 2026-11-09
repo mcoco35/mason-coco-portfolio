@@ -246,10 +246,12 @@ function App() {
               <p className="institution">Booz Allen Hamilton</p>
               <p className="dates">Jul 2026 - Present <span className="role-status">[ CURRENT ]</span></p>
               <ul>
-                <li>Configured enterprise network infrastructure, routing, and traffic redirectors.</li>
-                <li>Used Terraform for infrastructure as code.</li>
-                <li>Configured SIEM platforms for security monitoring.</li>
-                <li>Configured satellite communications equipment.</li>
+                <li>Configured VLANs, trunking, and inter-VLAN routing, along with enterprise routing, traffic redirectors, and satellite communications equipment.</li>
+                <li>Used Terraform for infrastructure as code and configuration management (Ansible/Puppet).</li>
+                <li>Deployed and troubleshot Docker containers.</li>
+                <li>Configured virtualization platforms (Proxmox/Hyper-V).</li>
+                <li>Configured Windows Server services, including Active Directory and DNS.</li>
+                <li>Configured network security monitoring and SIEM tooling (Suricata/Zeek/Elastic stack).</li>
               </ul>
             </div>
 

@@ -32,6 +32,7 @@ export const SKILLS_DATA = [
     name: 'DNS',
     category: 'Networking',
     sources: [
+      { type: 'work', label: 'Booz Allen — Windows Server administration including Active Directory and DNS' },
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
       { type: 'cert', label: 'CompTIA Network+ — Networking Concepts' },
       { type: 'cert', label: 'CompTIA Security+ — Security Operations' },
@@ -53,6 +54,7 @@ export const SKILLS_DATA = [
     name: 'VLANs / Spanning Tree / Switching',
     category: 'Networking',
     sources: [
+      { type: 'work', label: 'Booz Allen — VLANs, trunking, and inter-VLAN routing' },
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
       { type: 'cert', label: 'CompTIA Network+ — Network Implementation' },
       { type: 'cert', label: 'CompTIA Network+ — Network Troubleshooting' },
@@ -121,6 +123,13 @@ export const SKILLS_DATA = [
       { type: 'work', label: 'MIT BWSI — Teaching Assistant' },
       { type: 'cert', label: 'CompTIA A+ — Virtualization and Cloud' },
       { type: 'cert', label: 'CompTIA Security+ — Security Architecture' },
+    ]
+  },
+  {
+    name: 'Virtualization Platforms (Proxmox/Hyper-V)',
+    category: 'Networking',
+    sources: [
+      { type: 'work', label: 'Booz Allen — virtualization platforms (Proxmox/Hyper-V)' },
     ]
   },
   {
@@ -495,7 +504,7 @@ export const SKILLS_DATA = [
     name: 'SIEM / Log Analysis',
     category: 'Defense',
     sources: [
-      { type: 'work', label: 'Booz Allen — SIEM platforms for security monitoring' },
+      { type: 'work', label: 'Booz Allen — network security monitoring and SIEM tooling (Suricata/Zeek/Elastic stack)' },
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
       { type: 'cert', label: 'CompTIA CySA+ — Security Operations' },
       { type: 'cert', label: 'CompTIA SecurityX — Security Operations' },
@@ -778,6 +787,7 @@ export const SKILLS_DATA = [
     category: 'Programming',
     sources: [
       { type: 'work', label: 'Booz Allen — Terraform for infrastructure as code' },
+      { type: 'work', label: 'Booz Allen — configuration management (Ansible/Puppet)' },
       { type: 'cert', label: 'SecurityX — Security Architecture' },
       { type: 'cert', label: 'SecurityX — Security Engineering' },
     ]
@@ -807,6 +817,7 @@ export const SKILLS_DATA = [
     name: 'Windows Administration',
     category: 'Systems',
     sources: [
+      { type: 'work', label: 'Booz Allen — Windows Server administration including Active Directory and DNS' },
       { type: 'work', label: 'CSU — Research Assistant' },
       { type: 'cert', label: 'CompTIA A+ — Operating Systems' },
       { type: 'cert', label: 'CompTIA Security+ — Security Operations' },
@@ -852,6 +863,7 @@ export const SKILLS_DATA = [
     name: 'Containerization (Docker / Kubernetes)',
     category: 'Systems',
     sources: [
+      { type: 'work', label: 'Booz Allen — deployed and troubleshot Docker containers' },
       { type: 'cert', label: 'SecurityX — Security Architecture' },
       { type: 'cert', label: 'SecurityX — Security Engineering' },
       { type: 'cert', label: 'CompTIA PenTest+ — Attacks and Exploits' },
