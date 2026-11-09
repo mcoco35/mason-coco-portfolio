@@ -12,16 +12,15 @@ test('renders network engineering copy and the official Booz title', () => {
   expect(booz).toHaveTextContent(/Jul 2026 - Present/);
   const boozItems = [...booz.querySelectorAll('li')].map((li) => li.textContent);
   expect(boozItems.length).toBeLessThanOrEqual(8);
-  expect(boozItems[0]).toMatch(/VLANs, trunking, and inter-VLAN routing/);
-  expect(booz).toHaveTextContent(/OSPF, static routes, NAT, and firewall rules on Vyatta and pfSense/);
+  expect(boozItems[0]).toMatch(/VLANs, trunking, inter-VLAN routing, and enterprise routing/);
   expect(booz).toHaveTextContent(/Used Terraform for infrastructure as code and configuration management \(Ansible\/Puppet\)/);
   expect(booz).toHaveTextContent(/Deployed and troubleshot Docker containers/);
   expect(booz).toHaveTextContent(/virtualization platforms \(Proxmox\/Hyper-V\)/);
-  expect(booz).toHaveTextContent(/VMware ESXi hosts/);
   expect(booz).toHaveTextContent(/Windows Server services, including Active Directory and DNS/);
   expect(booz).toHaveTextContent(/Suricata\/Zeek\/Elastic stack/);
-  expect(booz).toHaveTextContent(/Security Onion\/Splunk/);
-  expect(booz).toHaveTextContent(/on-call support during live events/i);
+  expect(booz).toHaveTextContent(/Bash and Python traffic-generation scripts/);
+  expect(booz).toHaveTextContent(/on-call support during production operations, including pre-deployment readiness checks/);
+  expect(booz).not.toHaveTextContent(/Vyatta|Security Onion|runbooks|REST APIs|satellite|redirector|live events|event readiness/i);
   expect(booz).not.toHaveTextContent(/paths traffic followed|define network infrastructure|Exchange|GitLab|Kubernetes|DevOps|Agile|Cisco|Juniper|MikroTik|Palo Alto|Scapy/i);
   expect(booz).not.toHaveTextContent(/hundreds/i);
   expect(booz).not.toHaveTextContent(/1,594/);
@@ -41,11 +40,19 @@ test('renders network engineering copy and the official Booz title', () => {
   expect(about).toHaveTextContent(/Vyatta and pfSense/);
   expect(about).not.toHaveTextContent(/Agile|DevOps|4\+ years/i);
   const coleHeadings = screen.getAllByRole('heading', { name: 'Range Engineer / Cyber Security Systems Engineer' });
-  expect(coleHeadings).toHaveLength(2);
+  expect(coleHeadings).toHaveLength(1);
   const cole = coleHeadings[0].closest('.education-entry');
-  const coleTestLead = coleHeadings[1].closest('.education-entry');
+  const coleTestLead = screen.getByRole('heading', { name: 'Test Lead Engineer' }).closest('.education-entry');
+  expect(coleTestLead).toHaveTextContent(/Cole Engineering Services Inc\./);
   expect(coleTestLead).toHaveTextContent(/Oct 2024 - Sep 2025/);
-  expect(coleTestLead).toHaveTextContent(/nslookup, ping and MTR/);
+  const testLeadItems = [...coleTestLead.querySelectorAll('li')].map((li) => li.textContent);
+  expect(testLeadItems).toEqual([
+    'Led engineers building and testing network environments and cybersecurity training courses through a structured build-test-deploy lifecycle, from planning through execution.',
+    'Validated network and service builds against customer requirements: verified end-to-end reachability with ping and MTR (traceroute), tested services and name resolution with nslookup, and tested user emulation and scripted traffic generation.',
+    'Standardized QA by authoring SOPs and version-controlling test scripts in Git for repeatable validation.',
+    'Served as technical escalation point; mentored engineers on troubleshooting and incident reporting.',
+  ]);
+  expect(coleTestLead).not.toHaveTextContent(/virtualized infrastructure configurations/);
   const coleItems = [...cole.querySelectorAll('li')].map((li) => li.textContent);
   expect(coleItems[0]).toMatch(/Python\/HTML network-merging tool/);
   expect(coleItems[0]).toMatch(/90%-complete environment in seconds/);
@@ -59,7 +66,10 @@ test('renders network engineering copy and the official Booz title', () => {
   expect(coleItems.some((item) => /fiber-optic cabling/.test(item) && !/1,594/.test(item))).toBe(true);
   expect(cole).toHaveTextContent(/VMware ESXi hosts/);
   expect(cole).toHaveTextContent(/Security Onion\/Splunk/);
-  expect(cole).not.toHaveTextContent(/exercise environments/i);
+  expect(cole).toHaveTextContent(/automated tasks through REST APIs with Python/);
+  expect(cole).toHaveTextContent(/Linux package management and host hardening over SSH/);
+  expect(cole).not.toHaveTextContent(/exercise environments|live events|satellite|redirector|Suricata\/Zeek/i);
+  expect(document.body.textContent).not.toMatch(/satellite communications|traffic redirector|live events|event readiness/i);
   expect(cole).not.toHaveTextContent(/Cisco|Juniper|MikroTik|Palo Alto|Scapy/i);
   expect(screen.getByText(/Sep 2025 - Jul 2026/)).toBeInTheDocument();
 });
@@ -102,6 +112,8 @@ test('skills evidence does not cite CPTS or CISM', () => {
   const siem = SKILLS_DATA.find(skill => skill.name.startsWith('SIEM'));
   const ranges = SKILLS_DATA.find(skill => skill.name.startsWith('CTF'));
   expect(JSON.stringify(ranges.sources)).toMatch(/Booz Allen — Cyber Range Engineer/);
+  expect(JSON.stringify(ranges.sources)).toMatch(/Cole Engineering — Test Lead Engineer/);
+  expect(JSON.stringify(SKILLS_DATA)).not.toMatch(/Test Lead(?! Engineer)/);
   expect(JSON.stringify(siem.sources)).toMatch(/Suricata\/Zeek\/Elastic stack/);
   expect(JSON.stringify(siem.sources)).toMatch(/Booz Allen — Security Onion\/Splunk/);
   expect(JSON.stringify(siem.sources)).toMatch(/Cole Engineering — Security Onion\/Splunk/);

@@ -259,14 +259,13 @@ function App() {
               <p className="institution">Booz Allen Hamilton</p>
               <p className="dates">Jul 2026 - Present <span className="role-status">[ CURRENT ]</span></p>
               <ul>
-                <li>Configured VLANs, trunking, and inter-VLAN routing, enterprise routing, traffic redirectors, and satellite communications equipment.</li>
-                <li>Configured OSPF, static routes, NAT, and firewall rules on Vyatta and pfSense, managed DHCP, and placed network taps and SPAN ports for traffic monitoring.</li>
+                <li>Configured VLANs, trunking, inter-VLAN routing, and enterprise routing.</li>
                 <li>Used Terraform for infrastructure as code and configuration management (Ansible/Puppet), and automated environment builds with Bash and Docker.</li>
-                <li>Deployed and troubleshot Docker containers, configured virtualization platforms (Proxmox/Hyper-V), and administered VMware ESXi hosts.</li>
-                <li>Configured Windows Server services, including Active Directory and DNS, and troubleshot user access during event readiness checks.</li>
-                <li>Configured network security monitoring and SIEM tooling (Suricata/Zeek/Elastic stack) and integrated Security Onion/Splunk.</li>
-                <li>Provided on-call support during live events, wrote runbooks, network diagrams, and build notes, and tracked work in Jira.</li>
-                <li>Built intentionally vulnerable systems and web applications, wrote Bash and Python traffic-generation scripts, and automated work through REST APIs with Python.</li>
+                <li>Deployed and troubleshot Docker containers and configured virtualization platforms (Proxmox/Hyper-V).</li>
+                <li>Configured Windows Server services, including Active Directory and DNS.</li>
+                <li>Configured network security monitoring and SIEM tooling (Suricata/Zeek/Elastic stack).</li>
+                <li>Built intentionally vulnerable systems and web applications and wrote Bash and Python traffic-generation scripts.</li>
+                <li>Provided on-call support during production operations, including pre-deployment readiness checks and user-access troubleshooting.</li>
               </ul>
             </div>
 
@@ -276,27 +275,25 @@ function App() {
               <p className="dates">Sep 2025 - Jul 2026</p>
               <ul>
                 <li>Reverse-engineered the range platform and built a Python/HTML network-merging tool (packaged as a Windows executable) that generates infrastructure-as-code network builds, producing a 90%-complete environment in seconds and saving the team an estimated hundreds of hours of build time.</li>
-                <li>Partnered with customers to automate file transfers into environments and VM template copying across vSphere/ESXi with Bash, PowerCLI, and Python.</li>
-                <li>Troubleshot and resolved Tier 2 and Tier 3 connectivity faults across TCP/IP, DNS, BGP, and OSPF, configuring OSPF, static routes, NAT, and firewall rules on Vyatta and pfSense.</li>
-                <li>Automated Linux package management and host hardening in Python and Bash, reducing patch time by 40%, and automated environment builds with Bash and Docker.</li>
-                <li>Administered Linux systems over SSH and VMware ESXi hosts.</li>
+                <li>Partnered with customers to automate file transfers into environments and VM template copying across vSphere/ESXi with Bash, PowerCLI, and Python, and administered VMware ESXi hosts.</li>
+                <li>Resolved Tier 2 and Tier 3 TCP/IP, DNS, BGP, and OSPF faults, and configured OSPF, static routes, NAT, and firewall rules on Vyatta and pfSense.</li>
+                <li>Automated Linux package management and host hardening over SSH in Python and Bash, reducing patch time by 40%.</li>
                 <li>Maintained network infrastructure across 17 sites and 1,594 devices, managed DHCP, and placed network taps and SPAN ports for traffic monitoring.</li>
                 <li>Built physical servers and installed fiber-optic cabling.</li>
-                <li>Provided on-call support during live events, including readiness checks and user-access troubleshooting.</li>
+                <li>Integrated Security Onion/Splunk and automated tasks through REST APIs with Python.</li>
                 <li>Wrote runbooks, network diagrams, and build notes, and tracked the work in Jira.</li>
-                <li>Built intentionally vulnerable systems and web applications, wrote Bash and Python traffic-generation scripts, integrated Security Onion/Splunk, and automated tasks through REST APIs with Python.</li>
               </ul>
             </div>
 
             <div className="education-entry">
-              <h3>Range Engineer / Cyber Security Systems Engineer</h3>
+              <h3>Test Lead Engineer</h3>
               <p className="institution">Cole Engineering Services Inc.</p>
               <p className="dates">Oct 2024 - Sep 2025</p>
               <ul>
-                <li>Standardized QA workflows by authoring formal SOPs and managing test scripts via Git to ensure repeatable results.</li>
-                <li>Mentored a team of engineers on troubleshooting protocols and incident reporting, serving as the technical escalation point.</li>
-                <li>Performed network validation using nslookup, ping and MTR to verify TCP/IP integrity and identify latency root causes.</li>
-                <li>Tested virtualized infrastructure configurations against the stated requirements.</li>
+                <li>Led engineers building and testing network environments and cybersecurity training courses through a structured build-test-deploy lifecycle, from planning through execution.</li>
+                <li>Validated network and service builds against customer requirements: verified end-to-end reachability with ping and MTR (traceroute), tested services and name resolution with nslookup, and tested user emulation and scripted traffic generation.</li>
+                <li>Standardized QA by authoring SOPs and version-controlling test scripts in Git for repeatable validation.</li>
+                <li>Served as technical escalation point; mentored engineers on troubleshooting and incident reporting.</li>
               </ul>
             </div>
 

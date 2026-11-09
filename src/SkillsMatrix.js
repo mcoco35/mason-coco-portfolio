@@ -10,7 +10,7 @@ export const SKILLS_DATA = [
     category: 'Networking',
     sources: [
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
-      { type: 'work', label: 'Cole Engineering — Test Lead' },
+      { type: 'work', label: 'Cole Engineering — Test Lead Engineer' },
       { type: 'cert', label: 'CompTIA Network+ — Networking Concepts' },
       { type: 'cert', label: 'CompTIA A+ — Networking' },
       { type: 'cert', label: 'CompTIA Security+ — Security Architecture' },
@@ -145,7 +145,7 @@ export const SKILLS_DATA = [
       { type: 'work', label: 'Cole Engineering — VMware ESXi hosts' },
       { type: 'work', label: 'Cole Engineering — vSphere/ESXi template copying with PowerCLI' },
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
-      { type: 'work', label: 'Cole Engineering — Test Lead' },
+      { type: 'work', label: 'Cole Engineering — Test Lead Engineer' },
       { type: 'work', label: 'MIT BWSI — Teaching Assistant' },
       { type: 'cert', label: 'CompTIA A+ — Virtualization and Cloud' },
       { type: 'cert', label: 'CompTIA Security+ — Security Architecture' },
@@ -232,7 +232,7 @@ export const SKILLS_DATA = [
     category: 'Networking',
     sources: [
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
-      { type: 'work', label: 'Cole Engineering — Test Lead' },
+      { type: 'work', label: 'Cole Engineering — Test Lead Engineer' },
       { type: 'cert', label: 'CompTIA Network+ — Network Troubleshooting' },
       { type: 'cert', label: 'CompTIA A+ — Networking' },
       { type: 'education', label: 'M.S. Cybersecurity — Network & Infrastructure Security' },
@@ -789,7 +789,7 @@ export const SKILLS_DATA = [
     name: 'Git / Version Control',
     category: 'Programming',
     sources: [
-      { type: 'work', label: 'Cole Engineering — Test Lead' },
+      { type: 'work', label: 'Cole Engineering — Test Lead Engineer' },
       { type: 'education', label: 'B.S. Computer Science' },
     ]
   },
@@ -913,11 +913,11 @@ export const SKILLS_DATA = [
     ]
   },
   {
-    name: 'On-call Event Support',
+    name: 'On-call Production Operations',
     category: 'Systems',
     sources: [
-      { type: 'work', label: 'Booz Allen — on-call support during live events' },
-      { type: 'work', label: 'Cole Engineering — on-call support during live events' },
+      { type: 'work', label: 'Booz Allen — on-call support during production operations' },
+      { type: 'work', label: 'Cole Engineering — on-call support during production operations' },
     ]
   },
   {
@@ -933,7 +933,7 @@ export const SKILLS_DATA = [
     category: 'Systems',
     sources: [
       { type: 'work', label: 'Booz Allen — Cyber Range Engineer' },
-      { type: 'work', label: 'Cole Engineering — Test Lead' },
+      { type: 'work', label: 'Cole Engineering — Test Lead Engineer' },
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
       { type: 'work', label: 'MIT BWSI — Teaching Assistant' },
     ]
@@ -1059,7 +1059,7 @@ export const SKILLS_DATA = [
     name: 'Change Management & SOPs',
     category: 'Governance',
     sources: [
-      { type: 'work', label: 'Cole Engineering — Test Lead' },
+      { type: 'work', label: 'Cole Engineering — Test Lead Engineer' },
       { type: 'cert', label: 'CompTIA Security+ — General Security Concepts' },
       { type: 'cert', label: 'CompTIA A+ — Operational Procedures' },
       { type: 'cert', label: 'CompTIA Network+ — Network Operations' },
@@ -1089,7 +1089,7 @@ export const SKILLS_DATA = [
     sources: [
       { type: 'education', label: 'B.S. Computer Science — Strategic Writing' },
       { type: 'education', label: 'M.S. Cybersecurity — Leadership & Integration (Capstone)' },
-      { type: 'work', label: 'Cole Engineering — Test Lead (SOPs)' },
+      { type: 'work', label: 'Cole Engineering — Test Lead Engineer (SOPs)' },
     ]
   },
   {
