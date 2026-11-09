@@ -20,10 +20,12 @@ export const SKILLS_DATA = [
     ]
   },
   {
-    name: 'BGP / OSPF / EIGRP',
+    name: 'BGP / OSPF',
     category: 'Networking',
     sources: [
-      { type: 'work', label: 'Cole Engineering — Systems Engineer' },
+      { type: 'work', label: 'Cole Engineering — Tier 2/3 BGP and OSPF troubleshooting' },
+      { type: 'work', label: 'Cole Engineering — OSPF on Vyatta and pfSense' },
+      { type: 'work', label: 'Booz Allen — OSPF on Vyatta and pfSense' },
       { type: 'cert', label: 'CompTIA Network+ — Network Implementation' },
       { type: 'education', label: 'Bootcamp — Computer Networking Fundamentals' },
     ]
@@ -45,6 +47,8 @@ export const SKILLS_DATA = [
     name: 'DHCP / SLAAC / IPAM',
     category: 'Networking',
     sources: [
+      { type: 'work', label: 'Booz Allen — managed DHCP' },
+      { type: 'work', label: 'Cole Engineering — managed DHCP' },
       { type: 'cert', label: 'CompTIA Network+ — Network Operations' },
       { type: 'cert', label: 'CompTIA A+ — Networking' },
       { type: 'education', label: 'Bootcamp — Computer Networking Fundamentals' },
@@ -75,9 +79,27 @@ export const SKILLS_DATA = [
     name: 'NAT / PAT',
     category: 'Networking',
     sources: [
+      { type: 'work', label: 'Booz Allen — NAT on Vyatta and pfSense' },
+      { type: 'work', label: 'Cole Engineering — NAT on Vyatta and pfSense' },
       { type: 'cert', label: 'CompTIA Network+ — Network Implementation' },
       { type: 'cert', label: 'CompTIA Security+ — Security Architecture' },
       { type: 'education', label: 'Bootcamp — Computer Networking Fundamentals' },
+    ]
+  },
+  {
+    name: 'Vyatta / pfSense',
+    category: 'Networking',
+    sources: [
+      { type: 'work', label: 'Booz Allen — OSPF, static routes, NAT, and firewall rules' },
+      { type: 'work', label: 'Cole Engineering — OSPF, static routes, NAT, and firewall rules' },
+    ]
+  },
+  {
+    name: 'Network Taps / SPAN',
+    category: 'Networking',
+    sources: [
+      { type: 'work', label: 'Booz Allen — taps and SPAN ports for traffic monitoring' },
+      { type: 'work', label: 'Cole Engineering — taps and SPAN ports for traffic monitoring' },
     ]
   },
   {
@@ -95,7 +117,8 @@ export const SKILLS_DATA = [
     name: 'Firewalls / IDS / IPS',
     category: 'Networking',
     sources: [
-      { type: 'work', label: 'Cole Engineering — Systems Engineer' },
+      { type: 'work', label: 'Booz Allen — firewall rules on Vyatta and pfSense' },
+      { type: 'work', label: 'Cole Engineering — firewall rules on Vyatta and pfSense' },
       { type: 'cert', label: 'CompTIA SecurityX — Security Architecture' },
       { type: 'cert', label: 'CompTIA CySA+ — Security Operations' },
       { type: 'cert', label: 'CompTIA Security+ — Security Operations' },
@@ -118,6 +141,8 @@ export const SKILLS_DATA = [
     name: 'VMware / Virtualization',
     category: 'Networking',
     sources: [
+      { type: 'work', label: 'Booz Allen — VMware ESXi hosts' },
+      { type: 'work', label: 'Cole Engineering — VMware ESXi hosts' },
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
       { type: 'work', label: 'Cole Engineering — Test Lead' },
       { type: 'work', label: 'MIT BWSI — Teaching Assistant' },
@@ -505,6 +530,8 @@ export const SKILLS_DATA = [
     category: 'Defense',
     sources: [
       { type: 'work', label: 'Booz Allen — network security monitoring and SIEM tooling (Suricata/Zeek/Elastic stack)' },
+      { type: 'work', label: 'Booz Allen — Security Onion/Splunk' },
+      { type: 'work', label: 'Cole Engineering — Security Onion/Splunk' },
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
       { type: 'cert', label: 'CompTIA CySA+ — Security Operations' },
       { type: 'cert', label: 'CompTIA SecurityX — Security Operations' },
@@ -670,6 +697,8 @@ export const SKILLS_DATA = [
     name: 'Python',
     category: 'Programming',
     sources: [
+      { type: 'work', label: 'Booz Allen — REST APIs and traffic-generation scripts' },
+      { type: 'work', label: 'Cole Engineering — REST APIs and traffic-generation scripts' },
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
       { type: 'cert', label: 'CompTIA PenTest+ — Reconnaissance' },
       { type: 'cert', label: 'CompTIA CySA+ — Security Operations' },
@@ -681,6 +710,8 @@ export const SKILLS_DATA = [
     name: 'Bash / Shell Scripting',
     category: 'Programming',
     sources: [
+      { type: 'work', label: 'Booz Allen — environment builds and traffic-generation scripts' },
+      { type: 'work', label: 'Cole Engineering — environment builds and traffic-generation scripts' },
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
       { type: 'work', label: 'MIT BWSI — Teaching Assistant' },
       { type: 'cert', label: 'CompTIA PenTest+ — Reconnaissance' },
@@ -864,9 +895,35 @@ export const SKILLS_DATA = [
     category: 'Systems',
     sources: [
       { type: 'work', label: 'Booz Allen — deployed and troubleshot Docker containers' },
+      { type: 'work', label: 'Booz Allen — automated environment builds with Bash and Docker' },
+      { type: 'work', label: 'Cole Engineering — automated environment builds with Bash and Docker' },
       { type: 'cert', label: 'SecurityX — Security Architecture' },
       { type: 'cert', label: 'SecurityX — Security Engineering' },
       { type: 'cert', label: 'CompTIA PenTest+ — Attacks and Exploits' },
+    ]
+  },
+  {
+    name: 'Runbooks, Diagrams, and Jira',
+    category: 'Systems',
+    sources: [
+      { type: 'work', label: 'Booz Allen — runbooks, network diagrams, build notes, and Jira' },
+      { type: 'work', label: 'Cole Engineering — runbooks, network diagrams, build notes, and Jira' },
+    ]
+  },
+  {
+    name: 'On-call Event Support',
+    category: 'Systems',
+    sources: [
+      { type: 'work', label: 'Booz Allen — on-call support during live events' },
+      { type: 'work', label: 'Cole Engineering — on-call support during live events' },
+    ]
+  },
+  {
+    name: 'Vulnerable Systems and Web Applications',
+    category: 'Systems',
+    sources: [
+      { type: 'work', label: 'Booz Allen — intentionally vulnerable systems and web applications' },
+      { type: 'work', label: 'Cole Engineering — intentionally vulnerable systems and web applications' },
     ]
   },
   {

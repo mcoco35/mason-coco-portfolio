@@ -228,10 +228,10 @@ function App() {
             <h2>About Me <span className="cursor-blink">_</span></h2>
             <div className="binary-divider">root@mason-coco:~/about# cat bio.txt</div>
             <p>
-              I am a network and infrastructure engineer. I troubleshoot enterprise routing with BGP and OSPF, administer Linux over SSH, and automate package management and host hardening in Python and Bash. I use Terraform for infrastructure as code. Across my career I have built hundreds of cyber ranges.
+              I am a network and infrastructure engineer. I troubleshoot BGP and OSPF, configure static routes, NAT, and firewall rules on Vyatta and pfSense, administer Linux over SSH, and automate with Python and Bash. I use Terraform for infrastructure as code. Across my career I have built hundreds of cyber ranges.
             </p>
             <p>
-              At Booz Allen Hamilton I am a Cyber Range Engineer and Cyber Warfare Engineer. At Cole Engineering Services I resolved Tier 2 and Tier 3 faults on multi-vendor IP networks and cut Linux patch time by 40%. Earlier lab work is unchanged in the project log: mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
+              At Booz Allen Hamilton I am a Cyber Range Engineer and Cyber Warfare Engineer. At Cole Engineering Services I resolved Tier 2 and Tier 3 faults on Vyatta and pfSense and cut Linux patch time by 40%. Earlier lab work is unchanged in the project log: mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
             </p>
           </div>
         </section>
@@ -246,12 +246,14 @@ function App() {
               <p className="institution">Booz Allen Hamilton</p>
               <p className="dates">Jul 2026 - Present <span className="role-status">[ CURRENT ]</span></p>
               <ul>
-                <li>Configured VLANs, trunking, and inter-VLAN routing, along with enterprise routing, traffic redirectors, and satellite communications equipment.</li>
-                <li>Used Terraform for infrastructure as code and configuration management (Ansible/Puppet).</li>
-                <li>Deployed and troubleshot Docker containers.</li>
-                <li>Configured virtualization platforms (Proxmox/Hyper-V).</li>
-                <li>Configured Windows Server services, including Active Directory and DNS.</li>
-                <li>Configured network security monitoring and SIEM tooling (Suricata/Zeek/Elastic stack).</li>
+                <li>Configured VLANs, trunking, and inter-VLAN routing, enterprise routing, traffic redirectors, and satellite communications equipment.</li>
+                <li>Configured OSPF, static routes, NAT, and firewall rules on Vyatta and pfSense, managed DHCP, and placed network taps and SPAN ports for traffic monitoring.</li>
+                <li>Used Terraform for infrastructure as code and configuration management (Ansible/Puppet), and automated environment builds with Bash and Docker.</li>
+                <li>Deployed and troubleshot Docker containers, configured virtualization platforms (Proxmox/Hyper-V), and administered VMware ESXi hosts.</li>
+                <li>Configured Windows Server services, including Active Directory and DNS, and troubleshot user access during event readiness checks.</li>
+                <li>Configured network security monitoring and SIEM tooling (Suricata/Zeek/Elastic stack) and integrated Security Onion/Splunk.</li>
+                <li>Provided on-call support during live events, wrote runbooks, network diagrams, and build notes, and tracked work in Jira.</li>
+                <li>Built intentionally vulnerable systems and web applications, wrote Bash and Python traffic-generation scripts, and automated work through REST APIs with Python.</li>
               </ul>
             </div>
 
@@ -260,11 +262,14 @@ function App() {
               <p className="institution">Cole Engineering Services Inc.</p>
               <p className="dates">Sep 2025 - Jul 2026</p>
               <ul>
-                <li>Troubleshot and resolved Tier 2 and Tier 3 connectivity faults across TCP/IP, DNS, BGP, and OSPF on a multi-vendor network.</li>
-                <li>Automated Linux package management and host hardening in Python and Bash, reducing patch time by 40%.</li>
-                <li>Administered Linux systems over SSH and managed VMware virtualization.</li>
-                <li>Maintained network infrastructure across 17 sites and 1,594 devices.</li>
+                <li>Troubleshot and resolved Tier 2 and Tier 3 connectivity faults across TCP/IP, DNS, BGP, and OSPF, configuring OSPF, static routes, NAT, and firewall rules on Vyatta and pfSense.</li>
+                <li>Automated Linux package management and host hardening in Python and Bash, reducing patch time by 40%, and automated environment builds with Bash and Docker.</li>
+                <li>Administered Linux systems over SSH and VMware ESXi hosts.</li>
+                <li>Maintained network infrastructure across 17 sites and 1,594 devices, managed DHCP, and placed network taps and SPAN ports for traffic monitoring.</li>
                 <li>Built physical servers and installed fiber-optic cabling.</li>
+                <li>Provided on-call support during live events, including readiness checks and user-access troubleshooting.</li>
+                <li>Wrote runbooks, network diagrams, and build notes, and tracked the work in Jira.</li>
+                <li>Built intentionally vulnerable systems and web applications, wrote Bash and Python traffic-generation scripts, integrated Security Onion/Splunk, and automated tasks through REST APIs with Python.</li>
               </ul>
             </div>
 
