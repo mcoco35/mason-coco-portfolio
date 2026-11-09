@@ -35,6 +35,8 @@ test('renders network engineering copy and the official Booz title', () => {
   expect(about).toHaveTextContent(/Terraform/);
   expect(about).toHaveTextContent(/BGP, OSPF, VLANs, and NAT on Vyatta and pfSense/);
   expect(document.body.textContent).not.toMatch(/TS\/SCI|clearance|polygraph|cleared/i);
+  expect(about).toHaveTextContent(/As a range engineer, I resolved Tier 2 and Tier 3 routing and DNS faults/);
+  expect(about).not.toHaveTextContent(/Booz Allen|Cole Engineering|By Light/i);
   expect(about).not.toHaveTextContent(/multi-vendor|Cyber Warfare Engineer/i);
   expect(about).toHaveTextContent(/Vyatta and pfSense/);
   expect(about).not.toHaveTextContent(/Agile|DevOps|4\+ years/i);

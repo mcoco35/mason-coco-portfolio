@@ -242,7 +242,7 @@ function App() {
               I'm a Cyber Range Engineer who designs, builds, and operates the networks and infrastructure behind cyber training environments. I design and troubleshoot routed networks with BGP, OSPF, VLANs, and NAT on Vyatta and pfSense, administer Linux and Windows infrastructure, and automate builds and operations with Python, Bash, Terraform, Ansible/Puppet, and Docker. Across my career I've built hundreds of cyber ranges end to end, from enterprise routing to monitoring with Suricata, Zeek, Elastic, Security Onion, and Splunk.
             </p>
             <p>
-              At Booz Allen Hamilton I'm a Cyber Range Engineer. At Cole Engineering Services, as a Range Engineer / Cyber Security Systems Engineer, I resolved Tier 2 and Tier 3 routing and DNS faults, maintained infrastructure across 17 sites and 1,594 devices, and cut Linux patch time by 40% with Python and Bash automation. My project log covers mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
+              As a range engineer, I resolved Tier 2 and Tier 3 routing and DNS faults, maintained infrastructure across 17 sites and 1,594 devices, and cut Linux patch time by 40% with Python and Bash automation. My project log covers mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
             </p>
             </div>
             </div>
