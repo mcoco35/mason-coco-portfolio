@@ -40,13 +40,19 @@ test('renders network engineering copy and the official Booz title', () => {
   expect(about).toHaveTextContent(/Vyatta and pfSense/);
   expect(about).not.toHaveTextContent(/Agile|DevOps|4\+ years/i);
   const coleHeadings = screen.getAllByRole('heading', { name: 'Range Engineer / Cyber Security Systems Engineer' });
-  expect(coleHeadings).toHaveLength(2);
+  expect(coleHeadings).toHaveLength(1);
   const cole = coleHeadings[0].closest('.education-entry');
-  const coleTestLead = coleHeadings[1].closest('.education-entry');
+  const coleTestLead = screen.getByRole('heading', { name: 'Test Lead Engineer' }).closest('.education-entry');
+  expect(coleTestLead).toHaveTextContent(/Cole Engineering Services Inc\./);
   expect(coleTestLead).toHaveTextContent(/Oct 2024 - Sep 2025/);
-  expect(coleTestLead).toHaveTextContent(
-    'Validated network and service builds against customer requirements: verified end-to-end reachability with ping and MTR (traceroute), tested services and name resolution with nslookup, and tested user emulation and scripted traffic generation.'
-  );
+  const testLeadItems = [...coleTestLead.querySelectorAll('li')].map((li) => li.textContent);
+  expect(testLeadItems).toEqual([
+    'Led engineers building and testing network environments and cybersecurity training courses through a structured build-test-deploy lifecycle, from planning through execution.',
+    'Validated network and service builds against customer requirements: verified end-to-end reachability with ping and MTR (traceroute), tested services and name resolution with nslookup, and tested user emulation and scripted traffic generation.',
+    'Standardized QA by authoring SOPs and version-controlling test scripts in Git for repeatable validation.',
+    'Served as technical escalation point; mentored engineers on troubleshooting and incident reporting.',
+  ]);
+  expect(coleTestLead).not.toHaveTextContent(/virtualized infrastructure configurations/);
   const coleItems = [...cole.querySelectorAll('li')].map((li) => li.textContent);
   expect(coleItems[0]).toMatch(/Python\/HTML network-merging tool/);
   expect(coleItems[0]).toMatch(/90%-complete environment in seconds/);
@@ -106,6 +112,8 @@ test('skills evidence does not cite CPTS or CISM', () => {
   const siem = SKILLS_DATA.find(skill => skill.name.startsWith('SIEM'));
   const ranges = SKILLS_DATA.find(skill => skill.name.startsWith('CTF'));
   expect(JSON.stringify(ranges.sources)).toMatch(/Booz Allen — Cyber Range Engineer/);
+  expect(JSON.stringify(ranges.sources)).toMatch(/Cole Engineering — Test Lead Engineer/);
+  expect(JSON.stringify(SKILLS_DATA)).not.toMatch(/Test Lead(?! Engineer)/);
   expect(JSON.stringify(siem.sources)).toMatch(/Suricata\/Zeek\/Elastic stack/);
   expect(JSON.stringify(siem.sources)).toMatch(/Booz Allen — Security Onion\/Splunk/);
   expect(JSON.stringify(siem.sources)).toMatch(/Cole Engineering — Security Onion\/Splunk/);

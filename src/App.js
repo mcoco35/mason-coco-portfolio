@@ -286,14 +286,14 @@ function App() {
             </div>
 
             <div className="education-entry">
-              <h3>Range Engineer / Cyber Security Systems Engineer</h3>
+              <h3>Test Lead Engineer</h3>
               <p className="institution">Cole Engineering Services Inc.</p>
               <p className="dates">Oct 2024 - Sep 2025</p>
               <ul>
-                <li>Standardized QA workflows by authoring formal SOPs and managing test scripts via Git to ensure repeatable results.</li>
-                <li>Mentored a team of engineers on troubleshooting protocols and incident reporting, serving as the technical escalation point.</li>
+                <li>Led engineers building and testing network environments and cybersecurity training courses through a structured build-test-deploy lifecycle, from planning through execution.</li>
                 <li>Validated network and service builds against customer requirements: verified end-to-end reachability with ping and MTR (traceroute), tested services and name resolution with nslookup, and tested user emulation and scripted traffic generation.</li>
-                <li>Tested virtualized infrastructure configurations against the stated requirements.</li>
+                <li>Standardized QA by authoring SOPs and version-controlling test scripts in Git for repeatable validation.</li>
+                <li>Served as technical escalation point; mentored engineers on troubleshooting and incident reporting.</li>
               </ul>
             </div>
 
