@@ -6,6 +6,7 @@ test('renders network engineering copy and the official Booz title', () => {
   render(<App />);
   expect(screen.getByRole('heading', { level: 1, name: /mason coco/i })).toBeInTheDocument();
   expect(screen.getByText('Network & Infrastructure Engineering')).toBeInTheDocument();
+  expect(screen.getByAltText('Mason Coco headshot')).toBeInTheDocument();
   const booz = screen.getByRole('heading', { name: 'Cyber Range Engineer' }).closest('.education-entry');
   expect(booz).toHaveTextContent(/Booz Allen Hamilton/);
   expect(booz).toHaveTextContent(/Jul 2026 - Present/);

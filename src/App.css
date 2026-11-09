@@ -498,6 +498,44 @@ body::before {
   font-family: var(--font-primary);
 }
 
+.about-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.about-portrait {
+  width: min(240px, 100%);
+  margin: 0;
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--term-green);
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.35);
+}
+
+.about-copy {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 769px) {
+  .about-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.75rem;
+  }
+
+  .about-portrait {
+    width: 210px;
+    flex: 0 0 210px;
+  }
+}
+
 .app-section p {
   margin-bottom: 1.5rem;
   font-size: 1rem;
