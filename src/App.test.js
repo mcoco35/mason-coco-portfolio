@@ -6,7 +6,7 @@ test('renders network engineering copy and the official Booz title', () => {
   render(<App />);
   expect(screen.getByRole('heading', { level: 1, name: /mason coco/i })).toBeInTheDocument();
   expect(screen.getByText('Network & Infrastructure Engineering')).toBeInTheDocument();
-  const booz = screen.getByRole('heading', { name: /Cyber Range Engineer \/ Cyber Warfare Engineer/i }).closest('.education-entry');
+  const booz = screen.getByRole('heading', { name: 'Cyber Range Engineer' }).closest('.education-entry');
   expect(booz).toHaveTextContent(/Booz Allen Hamilton/);
   expect(booz).toHaveTextContent(/Jul 2026 - Present/);
   const boozItems = [...booz.querySelectorAll('li')].map((li) => li.textContent);
@@ -33,7 +33,12 @@ test('renders network engineering copy and the official Booz title', () => {
   expect(about).toHaveTextContent(/BGP and OSPF/);
   expect(about).toHaveTextContent(/Vyatta and pfSense/);
   expect(about).not.toHaveTextContent(/Agile|DevOps|4\+ years/i);
-  const cole = screen.getByRole('heading', { name: 'Cyber Security Systems Engineer' }).closest('.education-entry');
+  const coleHeadings = screen.getAllByRole('heading', { name: 'Range Engineer / Cyber Security Systems Engineer' });
+  expect(coleHeadings).toHaveLength(2);
+  const cole = coleHeadings[0].closest('.education-entry');
+  const coleTestLead = coleHeadings[1].closest('.education-entry');
+  expect(coleTestLead).toHaveTextContent(/Oct 2024 - Sep 2025/);
+  expect(coleTestLead).toHaveTextContent(/nslookup, ping and MTR/);
   const coleItems = [...cole.querySelectorAll('li')].map((li) => li.textContent);
   expect(coleItems.length).toBeLessThanOrEqual(8);
   expect(coleItems[0]).toMatch(/BGP, and OSPF/);

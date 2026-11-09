@@ -231,7 +231,7 @@ function App() {
               I am a network and infrastructure engineer. I troubleshoot BGP and OSPF, configure static routes, NAT, and firewall rules on Vyatta and pfSense, administer Linux over SSH, and automate with Python and Bash. I use Terraform for infrastructure as code. Across my career I have built hundreds of cyber ranges.
             </p>
             <p>
-              At Booz Allen Hamilton I am a Cyber Range Engineer and Cyber Warfare Engineer. At Cole Engineering Services I resolved Tier 2 and Tier 3 faults on Vyatta and pfSense and cut Linux patch time by 40%. Earlier lab work is unchanged in the project log: mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
+              At Booz Allen Hamilton I am a Cyber Range Engineer. At Cole Engineering Services I resolved Tier 2 and Tier 3 faults on Vyatta and pfSense and cut Linux patch time by 40%. Earlier lab work is unchanged in the project log: mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
             </p>
           </div>
         </section>
@@ -242,7 +242,7 @@ function App() {
             <div className="binary-divider">root@mason-coco:~/work-history# ./log.sh</div>
 
             <div className="education-entry">
-              <h3>Cyber Range Engineer / Cyber Warfare Engineer</h3>
+              <h3>Cyber Range Engineer</h3>
               <p className="institution">Booz Allen Hamilton</p>
               <p className="dates">Jul 2026 - Present <span className="role-status">[ CURRENT ]</span></p>
               <ul>
@@ -258,7 +258,7 @@ function App() {
             </div>
 
             <div className="education-entry">
-              <h3>Cyber Security Systems Engineer</h3>
+              <h3>Range Engineer / Cyber Security Systems Engineer</h3>
               <p className="institution">Cole Engineering Services Inc.</p>
               <p className="dates">Sep 2025 - Jul 2026</p>
               <ul>
@@ -274,7 +274,7 @@ function App() {
             </div>
 
             <div className="education-entry">
-              <h3>Test Lead Engineer</h3>
+              <h3>Range Engineer / Cyber Security Systems Engineer</h3>
               <p className="institution">Cole Engineering Services Inc.</p>
               <p className="dates">Oct 2024 - Sep 2025</p>
               <ul>
