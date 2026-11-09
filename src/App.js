@@ -227,12 +227,25 @@ function App() {
           <div className="section-content">
             <h2>About Me <span className="cursor-blink">_</span></h2>
             <div className="binary-divider">root@mason-coco:~/about# cat bio.txt</div>
+            <div className="about-layout">
+            <picture className="about-portrait">
+              <source srcSet={`${process.env.PUBLIC_URL}/mason-coco-headshot.webp`} type="image/webp" />
+              <img
+                src={`${process.env.PUBLIC_URL}/mason-coco-headshot.jpg`}
+                alt="Mason Coco headshot"
+                width="400"
+                height="400"
+              />
+            </picture>
+            <div className="about-copy">
             <p>
-              I am a network and infrastructure engineer. I troubleshoot BGP and OSPF, configure static routes, NAT, and firewall rules on Vyatta and pfSense, administer Linux over SSH, and automate with Python and Bash. I use Terraform for infrastructure as code. Across my career I have built hundreds of cyber ranges.
+              I'm a Cyber Range Engineer who designs, builds, and operates the networks and infrastructure behind cyber training environments. I design and troubleshoot routed networks with BGP, OSPF, VLANs, and NAT on Vyatta and pfSense, administer Linux and Windows infrastructure, and automate builds and operations with Python, Bash, Terraform, Ansible/Puppet, and Docker. Across my career I've built hundreds of cyber ranges end to end, from enterprise routing to monitoring with Suricata, Zeek, Elastic, Security Onion, and Splunk.
             </p>
             <p>
-              At Booz Allen Hamilton I am a Cyber Range Engineer and Cyber Warfare Engineer. At Cole Engineering Services I resolved Tier 2 and Tier 3 faults on Vyatta and pfSense and cut Linux patch time by 40%. Earlier lab work is unchanged in the project log: mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
+              As a range engineer, I resolved Tier 2 and Tier 3 routing and DNS faults, maintained infrastructure across 17 sites and 1,594 devices, and cut Linux patch time by 40% with Python and Bash automation. My project log covers mobile and embedded device security, AI-integrated applications, VPN access, encrypted messaging, and this portfolio.
             </p>
+            </div>
+            </div>
           </div>
         </section>
 
@@ -242,7 +255,7 @@ function App() {
             <div className="binary-divider">root@mason-coco:~/work-history# ./log.sh</div>
 
             <div className="education-entry">
-              <h3>Cyber Range Engineer / Cyber Warfare Engineer</h3>
+              <h3>Cyber Range Engineer</h3>
               <p className="institution">Booz Allen Hamilton</p>
               <p className="dates">Jul 2026 - Present <span className="role-status">[ CURRENT ]</span></p>
               <ul>
@@ -258,10 +271,12 @@ function App() {
             </div>
 
             <div className="education-entry">
-              <h3>Cyber Security Systems Engineer</h3>
+              <h3>Range Engineer / Cyber Security Systems Engineer</h3>
               <p className="institution">Cole Engineering Services Inc.</p>
               <p className="dates">Sep 2025 - Jul 2026</p>
               <ul>
+                <li>Reverse-engineered the range platform and built a Python/HTML network-merging tool (packaged as a Windows executable) that generates infrastructure-as-code network builds, producing a 90%-complete environment in seconds and saving the team an estimated hundreds of hours of build time.</li>
+                <li>Partnered with customers to automate file transfers into environments and VM template copying across vSphere/ESXi with Bash, PowerCLI, and Python.</li>
                 <li>Troubleshot and resolved Tier 2 and Tier 3 connectivity faults across TCP/IP, DNS, BGP, and OSPF, configuring OSPF, static routes, NAT, and firewall rules on Vyatta and pfSense.</li>
                 <li>Automated Linux package management and host hardening in Python and Bash, reducing patch time by 40%, and automated environment builds with Bash and Docker.</li>
                 <li>Administered Linux systems over SSH and VMware ESXi hosts.</li>
@@ -274,7 +289,7 @@ function App() {
             </div>
 
             <div className="education-entry">
-              <h3>Test Lead Engineer</h3>
+              <h3>Range Engineer / Cyber Security Systems Engineer</h3>
               <p className="institution">Cole Engineering Services Inc.</p>
               <p className="dates">Oct 2024 - Sep 2025</p>
               <ul>
