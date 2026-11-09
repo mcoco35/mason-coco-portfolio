@@ -263,6 +263,7 @@ function App() {
               <p className="dates">Sep 2025 - Jul 2026</p>
               <ul>
                 <li>Reverse-engineered the range platform and built a Python/HTML network-merging tool (packaged as a Windows executable) that generates infrastructure-as-code network builds, producing a 90%-complete environment in seconds and saving the team an estimated hundreds of hours of build time.</li>
+                <li>Partnered with customers to automate file transfers into environments and VM template copying across vSphere/ESXi with Bash, PowerCLI, and Python.</li>
                 <li>Troubleshot and resolved Tier 2 and Tier 3 connectivity faults across TCP/IP, DNS, BGP, and OSPF, configuring OSPF, static routes, NAT, and firewall rules on Vyatta and pfSense.</li>
                 <li>Automated Linux package management and host hardening in Python and Bash, reducing patch time by 40%, and automated environment builds with Bash and Docker.</li>
                 <li>Administered Linux systems over SSH and VMware ESXi hosts.</li>

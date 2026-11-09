@@ -143,6 +143,7 @@ export const SKILLS_DATA = [
     sources: [
       { type: 'work', label: 'Booz Allen — VMware ESXi hosts' },
       { type: 'work', label: 'Cole Engineering — VMware ESXi hosts' },
+      { type: 'work', label: 'Cole Engineering — vSphere/ESXi template copying with PowerCLI' },
       { type: 'work', label: 'Cole Engineering — Systems Engineer' },
       { type: 'work', label: 'Cole Engineering — Test Lead' },
       { type: 'work', label: 'MIT BWSI — Teaching Assistant' },
@@ -723,6 +724,7 @@ export const SKILLS_DATA = [
     name: 'PowerShell',
     category: 'Programming',
     sources: [
+      { type: 'work', label: 'Cole Engineering — PowerCLI for vSphere/ESXi' },
       { type: 'cert', label: 'CompTIA PenTest+ — Reconnaissance' },
       { type: 'cert', label: 'CompTIA CySA+ — Security Operations' },
       { type: 'cert', label: 'SecurityX — Security Engineering' },

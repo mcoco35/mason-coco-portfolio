@@ -46,9 +46,11 @@ test('renders network engineering copy and the official Booz title', () => {
   const coleItems = [...cole.querySelectorAll('li')].map((li) => li.textContent);
   expect(coleItems[0]).toMatch(/Python\/HTML network-merging tool/);
   expect(coleItems[0]).toMatch(/90%-complete environment in seconds/);
-  expect(coleItems[1]).toMatch(/BGP, and OSPF/);
-  expect(coleItems[1]).toMatch(/Vyatta and pfSense/);
-  expect(coleItems[2]).toMatch(/reducing patch time by 40%/);
+  expect(coleItems[1]).toMatch(/VM template copying across vSphere\/ESXi with Bash, PowerCLI, and Python/);
+  expect(coleItems[2]).toMatch(/BGP, and OSPF/);
+  expect(coleItems[2]).toMatch(/Vyatta and pfSense/);
+  expect(coleItems[3]).toMatch(/reducing patch time by 40%/);
+  expect(cole).not.toHaveTextContent(/PCTE/);
   expect(coleTestLead).not.toHaveTextContent(/network-merging tool/);
   expect(coleItems.some((item) => /17 sites and 1,594 devices/.test(item) && !/fiber|servers/.test(item))).toBe(true);
   expect(coleItems.some((item) => /fiber-optic cabling/.test(item) && !/1,594/.test(item))).toBe(true);
@@ -91,6 +93,9 @@ test('skills evidence does not cite CPTS or CISM', () => {
   const vmware = SKILLS_DATA.find(skill => skill.name.startsWith('VMware'));
   expect(JSON.stringify(vmware.sources)).toMatch(/Booz Allen — VMware ESXi hosts/);
   expect(JSON.stringify(vmware.sources)).toMatch(/Cole Engineering — VMware ESXi hosts/);
+  expect(JSON.stringify(vmware.sources)).toMatch(/vSphere\/ESXi template copying with PowerCLI/);
+  const powershell = SKILLS_DATA.find(skill => skill.name === 'PowerShell');
+  expect(JSON.stringify(powershell.sources)).toMatch(/Cole Engineering — PowerCLI for vSphere\/ESXi/);
   const siem = SKILLS_DATA.find(skill => skill.name.startsWith('SIEM'));
   const ranges = SKILLS_DATA.find(skill => skill.name.startsWith('CTF'));
   expect(JSON.stringify(ranges.sources)).toMatch(/Booz Allen — Cyber Range Engineer/);
